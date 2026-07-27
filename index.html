@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- Guvenlik: GitHub Pages ozel HTTP basligi desteklemedigi icin CSP meta ile taniniyor.
+     script-src 'self' -> disaridan enjekte edilen hicbir betik calisamaz.
+     style-src 'unsafe-inline' zorunlu: sayfada 16 adet inline style ozniteligi var. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#1c0a1c">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,7 +36,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="assets/css/style.css?v=18">
+<link rel="stylesheet" href="assets/css/style.css?v=19">
 </head>
 <body>
 
@@ -347,6 +353,6 @@
   </div>
 </footer>
 
-<script src="assets/js/script.js?v=3"></script>
+<script src="assets/js/script.js?v=4"></script>
 </body>
 </html>
