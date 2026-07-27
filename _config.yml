@@ -1,0 +1,10 @@
+# GitHub Pages (Jekyll) yapilandirmasi
+#
+# Tek amaci: repo'da bulunmasi gereken ama yayinlanan sitede yeri olmayan
+# dosyalari haric tutmak. Site duz HTML oldugu icin (front matter ve Liquid
+# sozdizimi yok) Jekyll geri kalan her seyi oldugu gibi kopyalar.
+#
+# CNAME dosyasi burada YOK cunku GitHub Pages ozel alan adini ondan okur.
+
+exclude:
+  - README.md
