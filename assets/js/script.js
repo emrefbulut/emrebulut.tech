@@ -14,6 +14,9 @@ const translations = {
     "hero.cta.contact": "İletişime Geç",
     "hero.scrollDown": "Kaydır",
     "hero.scrollCueAria": "Aşağı kaydır",
+    "aria.scrollTop": "Yukarı çık",
+    "aria.langToggle": "Dil değiştir",
+    "aria.menu": "Menü",
 
     "about.title": "Ben Kimim?",
     "about.p1": "Elektrik ve Elektronik Mühendisliği öğrencisi olarak bilgisayarlı görü (Computer Vision), model eğitimi ve donanım-yazılım entegrasyonları odaklı çalışmalar yürütüyorum. Kurumsal bilgi teknolojileri altyapılarında edindiğim sistem ve sanallaştırma tecrübesini, nesne yönelimli programlama yetkinliklerimle birleştirerek karmaşık mühendislik problemlerine analitik çözümler üretiyorum. Liderlik görevlerimden ve takım çalışmalarından kazandığım güçlü iletişim becerilerimle, mühendislik standartlarına tam uyumlu, yenilikçi ve ölçeklenebilir teknolojiler geliştirmeyi hedefliyorum.",
@@ -114,6 +117,9 @@ const translations = {
     "hero.cta.contact": "Get in Touch",
     "hero.scrollDown": "Scroll",
     "hero.scrollCueAria": "Scroll down",
+    "aria.scrollTop": "Back to top",
+    "aria.langToggle": "Change language",
+    "aria.menu": "Menu",
 
     "about.title": "Who Am I?",
     "about.p1": "As an Electrical and Electronics Engineering student, my work is centered around computer vision, model training, and hardware-software integration. By combining my system and virtualization experience gained in enterprise IT infrastructures with my object-oriented programming capabilities, I develop analytical solutions to complex engineering problems. With strong communication skills honed through leadership roles and teamwork, I aim to develop innovative, scalable technologies fully compliant with engineering standards.",
@@ -215,21 +221,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
   // --- Scroll Effects ---
+  // passive: bu isleyici asla preventDefault cagirmaz; tarayiciya bunu bildirmek
+  // dokunmatik cihazlarda kaydirmanin takilmasini onler.
   window.addEventListener('scroll', () => {
-    // Header Blur & Border
-    if (window.scrollY > 20) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-
-    // Scroll to Top Button
-    if (window.scrollY > 400) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  });
+    header.classList.toggle('scrolled', window.scrollY > 20);
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
 
   scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -239,18 +236,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const bgVideo = document.querySelector('.site-bg-video');
   if (bgVideo) {
     const FADE = 0.6; // seconds faded at each end of the loop
+    let lastOpacity = null;
+
+    const fadeAt = (time, duration) => {
+      const remaining = duration - time;
+      if (remaining < FADE) return Math.max(remaining / FADE, 0);
+      if (time < FADE) return Math.min(time / FADE, 1);
+      return 1;
+    };
+
     const tick = () => {
-      const dur = bgVideo.duration;
-      if (dur) {
-        const t = bgVideo.currentTime;
-        const remaining = dur - t;
-        let opacity = 1;
-        if (remaining < FADE) {
-          opacity = Math.max(remaining / FADE, 0);
-        } else if (t < FADE) {
-          opacity = Math.min(t / FADE, 1);
+      const duration = bgVideo.duration;
+      if (duration) {
+        // Ayni degeri her karede yeniden yazmak bos yere stil hesaplamasi tetikler;
+        // sadece deger degistiginde yaz. Gorsel sonuc birebir ayni.
+        const opacity = fadeAt(bgVideo.currentTime, duration);
+        if (opacity !== lastOpacity) {
+          bgVideo.style.opacity = opacity;
+          lastOpacity = opacity;
         }
-        bgVideo.style.opacity = opacity;
       }
       requestAnimationFrame(tick);
     };
@@ -266,15 +270,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Mobile Menu Toggle ---
+  const setMenuOpen = (isOpen) => {
+    mainNav.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+  };
+  setMenuOpen(false);
+
   hamburger.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
+    setMenuOpen(!mainNav.classList.contains('open'));
   });
 
   // Close menu when clicking a link
   mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('open');
-    });
+    link.addEventListener('click', () => setMenuOpen(false));
   });
 
   // --- Reveal on Scroll ---
@@ -298,20 +306,24 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
+  // --- Language State ---
+  // Proje detay dugmesi de bu degiskeni okudugu icin ondan once tanimlanir.
+  let currentLang = 'tr';
+
   // --- Project Detail Toggle ---
   document.querySelectorAll('.project-toggle').forEach(btn => {
+    btn.setAttribute('aria-expanded', 'false');
     btn.addEventListener('click', () => {
       const card = btn.closest('.project-card');
       const isOpen = card.classList.toggle('is-open');
       const key = isOpen ? 'projects.toggle.hide' : 'projects.toggle.show';
+      btn.setAttribute('aria-expanded', String(isOpen));
       btn.setAttribute('data-i18n', key);
-      btn.innerHTML = translations[currentLang][key];
+      btn.textContent = translations[currentLang][key];
     });
   });
 
   // --- Language Toggle ---
-  let currentLang = 'tr';
-
   function updateLanguage(lang) {
     if (lang === currentLang) return;
     currentLang = lang;
@@ -325,11 +337,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Update Text Content
-    const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-    elementsToTranslate.forEach(el => {
+    // textContent kullaniliyor: tum ceviriler duz metin oldugu icin render sonucu
+    // innerHTML ile birebir ayni, ancak HTML enjeksiyon yuzeyi tamamen ortadan kalkiyor.
+    document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
-        el.innerHTML = translations[lang][key];
+        el.textContent = translations[lang][key];
       }
     });
 

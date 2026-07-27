@@ -12,7 +12,11 @@
 <meta name="author" content="Emre Bulut">
 
 <!-- Open Graph / sosyal paylaşım -->
+<link rel="canonical" href="https://emrebulut.tech/">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://emrebulut.tech/">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Emre Bulut">
 <meta property="og:title" content="Emre Bulut | Elektrik-Elektronik Mühendisliği Öğrencisi">
 <meta property="og:description" content="Bilgisayarlı görü, gömülü sistemler ve enerji sistemleri üzerine projeler geliştiren EEE öğrencisi.">
 <meta name="twitter:card" content="summary">
@@ -23,15 +27,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css?v=17">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/css/style.css?v=18">
 </head>
 <body>
 
-<video class="site-bg-video" autoplay muted loop playsinline src="assets/video/bg-flow.mp4"></video>
-<div class="site-bg-overlay"></div>
+<video class="site-bg-video" autoplay muted loop playsinline aria-hidden="true" src="assets/video/bg-flow.mp4"></video>
+<div class="site-bg-overlay" aria-hidden="true"></div>
 
-<button class="scroll-top" id="scrollTop" aria-label="Yukarı çık">↑</button>
+<button class="scroll-top" id="scrollTop" aria-label="Yukarı çık" data-i18n-aria="aria.scrollTop">↑</button>
 
 <header class="site-header" id="siteHeader">
   <div class="container nav-wrap">
@@ -50,13 +56,13 @@
     </nav>
 
     <div class="nav-actions">
-      <button class="lang-toggle" id="langToggle" aria-label="Dil değiştir">
+      <button class="lang-toggle" id="langToggle" aria-label="Dil değiştir" data-i18n-aria="aria.langToggle">
         <span class="lang-option active" data-lang="tr">TR</span>
         <span class="lang-sep">|</span>
         <span class="lang-option" data-lang="en">EN</span>
       </button>
       <a class="btn btn-ghost btn-small cv-link" href="assets/cv/Emre_Bulut_CV.pdf" download data-i18n="nav.cv" style="background:transparent; border:1px solid var(--border); padding: 5px 12px; border-radius:12px; color:var(--text-muted); font-size: 0.85rem;">CV</a>
-      <button class="hamburger" id="hamburger" aria-label="Menü">
+      <button class="hamburger" id="hamburger" aria-label="Menü" data-i18n-aria="aria.menu" aria-controls="mainNav" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -142,7 +148,7 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot" style="background: white; overflow: hidden;">
-            <img src="assets/images/logo_medipol.png" alt="Medipol Üniversitesi" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/images/logo_medipol.png" alt="Medipol Üniversitesi" width="74" height="74" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="glass-card timeline-card">
             <span class="timeline-date">Tahmini Mezuniyet: Haziran 2028</span>
@@ -162,7 +168,7 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot" style="background: white; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/images/logo_ziraat_latest.jpg" alt="Ziraat Teknoloji" style="width: 75px; height: 75px; object-fit: contain; transform: translateX(2px) translateY(2px);">
+            <img src="assets/images/logo_ziraat_latest.jpg" alt="Ziraat Teknoloji" width="75" height="75" loading="lazy" decoding="async" style="width: 75px; height: 75px; object-fit: contain; transform: translateX(2px) translateY(2px);">
           </div>
           <div class="glass-card timeline-card">
             <span class="timeline-date" data-i18n="experience.ziraat.date">Temmuz 2026 — Ağustos 2026 · 1 ay</span>
@@ -177,7 +183,7 @@
 
         <div class="timeline-item">
           <div class="timeline-dot" style="background: white; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/images/logo_emlak.png" alt="Emlak Konut" style="width: 55px; height: 55px; object-fit: contain;">
+            <img src="assets/images/logo_emlak.png" alt="Emlak Konut" width="55" height="55" loading="lazy" decoding="async" style="width: 55px; height: 55px; object-fit: contain;">
           </div>
           <div class="glass-card timeline-card">
             <span class="timeline-date" data-i18n="experience.gulverdi.date">Ağustos 2025 — Eylül 2025 · 1 ay</span>
@@ -192,7 +198,7 @@
 
         <div class="timeline-item">
           <div class="timeline-dot" style="background: white; overflow: hidden;">
-            <img src="assets/images/logo_ieee.jpg" alt="IEEE ComSoc" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/images/logo_ieee.jpg" alt="IEEE ComSoc" width="74" height="74" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="glass-card timeline-card">
             <span class="timeline-date">Eylül 2025 — Temmuz 2026</span>
@@ -341,6 +347,6 @@
   </div>
 </footer>
 
-<script src="assets/js/script.js?v=2"></script>
+<script src="assets/js/script.js?v=3"></script>
 </body>
 </html>
