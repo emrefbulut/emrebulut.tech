@@ -1,0 +1,7 @@
+# Claude Code yerel ayarları
+.claude/
+
+# İşletim sistemi dosyaları
+Thumbs.db
+desktop.ini
+.DS_Store

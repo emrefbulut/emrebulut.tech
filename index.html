@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1c0a1c">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Emre Bulut | Elektrik-Elektronik Mühendisliği Öğrencisi</title>
+<meta name="description" content="Emre Bulut - Elektrik ve Elektronik Mühendisliği öğrencisi. Bilgisayarlı görü, gömülü sistemler ve enerji sistemleri üzerine projeler.">
+<meta name="author" content="Emre Bulut">
+
+<!-- Open Graph / sosyal paylaşım -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Emre Bulut | Elektrik-Elektronik Mühendisliği Öğrencisi">
+<meta property="og:description" content="Bilgisayarlı görü, gömülü sistemler ve enerji sistemleri üzerine projeler geliştiren EEE öğrencisi.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Emre Bulut | Elektrik-Elektronik Mühendisliği Öğrencisi">
+<meta name="twitter:description" content="Bilgisayarlı görü, gömülü sistemler ve enerji sistemleri üzerine projeler geliştiren EEE öğrencisi.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%23f0a6ff%22/><stop offset=%221%22 stop-color=%22%237a2e6b%22/></linearGradient></defs><text x=%2250%22 y=%2270%22 font-family=%22Arial, sans-serif%22 font-weight=%22800%22 font-size=%2258%22 fill=%22url(%23g)%22 text-anchor=%22middle%22>EB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css?v=17">
+</head>
+<body>
+
+<video class="site-bg-video" autoplay muted loop playsinline src="assets/video/bg-flow.mp4"></video>
+<div class="site-bg-overlay"></div>
+
+<button class="scroll-top" id="scrollTop" aria-label="Yukarı çık">↑</button>
+
+<header class="site-header" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="#top" class="logo">
+      <span class="logo-text">Emre Bulut</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#about" data-i18n="nav.about">Hakkımda</a>
+      <a href="#education" data-i18n="nav.education">Eğitim</a>
+      <a href="#experience" data-i18n="nav.experience">Deneyim</a>
+      <a href="#projects" data-i18n="nav.projects">Projeler</a>
+      <a href="#skills" data-i18n="nav.skills">Yetenekler</a>
+      <a href="#interests" data-i18n="nav.interests">İlgi Alanları</a>
+      <a href="#contact" data-i18n="nav.contact">İletişim</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Dil değiştir">
+        <span class="lang-option active" data-lang="tr">TR</span>
+        <span class="lang-sep">|</span>
+        <span class="lang-option" data-lang="en">EN</span>
+      </button>
+      <a class="btn btn-ghost btn-small cv-link" href="assets/cv/Emre_Bulut_CV.pdf" download data-i18n="nav.cv" style="background:transparent; border:1px solid var(--border); padding: 5px 12px; border-radius:12px; color:var(--text-muted); font-size: 0.85rem;">CV</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span data-i18n="hero.hi">Merhaba, ben</span>
+          <span class="name-ink">Emre</span> <span class="name-accent">Bulut</span>
+        </h1>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">Projelerimi Gör</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero.cta.contact">İletişime Geç</a>
+        </div>
+        <div class="social-links" style="margin-top: 2rem;">
+          <a href="https://github.com/emrefbulut" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/emre-bulut-212b42200/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:emrebulutf@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <button class="scroll-cue" id="scrollCue" aria-label="Aşağı kaydır" data-i18n-aria="hero.scrollCueAria">
+      <span class="scroll-cue-label" data-i18n="hero.scrollDown">Kaydır</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </button>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 data-i18n="about.title">Ben Kimim?</h2>
+
+      <div class="about-layout">
+        <p class="about-bio" data-i18n="about.p1">
+          Elektrik ve Elektronik Mühendisliği öğrencisi olarak bilgisayarlı görü (Computer Vision), model eğitimi ve
+          donanım-yazılım entegrasyonları odaklı çalışmalar yürütüyorum. Kurumsal bilgi teknolojileri altyapılarında
+          edindiğim sistem ve sanallaştırma tecrübesini, nesne yönelimli programlama yetkinliklerimle birleştirerek
+          karmaşık mühendislik problemlerine analitik çözümler üretiyorum. Liderlik görevlerimden ve takım
+          çalışmalarından kazandığım güçlü iletişim becerilerimle, mühendislik standartlarına tam uyumlu, yenilikçi
+          ve ölçeklenebilir teknolojiler geliştirmeyi hedefliyorum.
+        </p>
+
+        <dl class="about-facts">
+          <div class="about-fact">
+            <dt data-i18n="about.stat.location.label">Konum</dt>
+            <dd>İstanbul, Türkiye</dd>
+          </div>
+          <div class="about-fact">
+            <dt data-i18n="about.stat.uni.label">Üniversite</dt>
+            <dd>İstanbul Medipol Üni.</dd>
+          </div>
+          <div class="about-fact">
+            <dt data-i18n="about.stat.field.label">Bölüm</dt>
+            <dd data-i18n="about.stat.field.value">Elektrik-Elektronik Müh.</dd>
+          </div>
+          <div class="about-fact">
+            <dt data-i18n="about.stat.lang.label">Diller</dt>
+            <dd data-i18n="about.stat.lang.value">Türkçe, İngilizce (İleri)</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 data-i18n="education.title">Akademik Yolculuk</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: white; overflow: hidden;">
+            <img src="assets/images/logo_medipol.png" alt="Medipol Üniversitesi" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">Tahmini Mezuniyet: Haziran 2028</span>
+            <h3>İstanbul Medipol Üniversitesi</h3>
+            <p data-i18n="education.medipol">Lisans Derecesi, Elektrik ve Elektronik Mühendisliği</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 data-i18n="experience.title">Deneyim</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: white; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/images/logo_ziraat_latest.jpg" alt="Ziraat Teknoloji" style="width: 75px; height: 75px; object-fit: contain; transform: translateX(2px) translateY(2px);">
+          </div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date" data-i18n="experience.ziraat.date">Temmuz 2026 — Ağustos 2026 · 1 ay</span>
+            <h3>Ziraat Teknoloji A.Ş.</h3>
+            <p class="role" data-i18n="experience.ziraat.role">Sistem ve Sanallaştırma Mühendisliği Stajyeri (IT Altyapı &amp; Operasyon)</p>
+            <ul>
+              <li data-i18n="experience.ziraat.b1">Türkiye'nin en büyük teknoloji üslerinden birinde, dev ölçekli kurumsal veri merkezlerinde VMware vSphere, VMware Workstation ve sanallaştırma mimarileri üzerinde görev almaktayım.</li>
+              <li data-i18n="experience.ziraat.b2">Red Hat Enterprise Linux ve Windows Server platformlarında terminal tabanlı sistem yönetimi, ağ topolojisi analizi ve operasyonel iş sürekliliği süreçlerini uygulamaktayım.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: white; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/images/logo_emlak.png" alt="Emlak Konut" style="width: 55px; height: 55px; object-fit: contain;">
+          </div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date" data-i18n="experience.gulverdi.date">Ağustos 2025 — Eylül 2025 · 1 ay</span>
+            <h3>Gülverdi Elektrik</h3>
+            <p class="role" data-i18n="experience.gulverdi.role">Elektrik Mühendisliği Stajyeri (Güç Sistemleri &amp; Elektrik Altyapısı)</p>
+            <ul>
+              <li data-i18n="experience.gulverdi.b1">Emlak Konut – Adıyaman Merkez Yerinde Dönüşüm projesindeki gönüllü stajım süresince, büyük ölçekli anahtar teslim elektrik altyapı ve üst yapı çalışmalarının yürütülmesinde kapsamlı uygulamalı deneyim kazandım.</li>
+              <li data-i18n="experience.gulverdi.b3">Yüksek gerilim sistemleri, bina elektrik altyapısı ve kompleks bina geneli zayıf akım sistemleri dahil olmak üzere geniş bir yelpazede sistemler üzerinde derin teknik yetkinlik geliştirdim.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: white; overflow: hidden;">
+            <img src="assets/images/logo_ieee.jpg" alt="IEEE ComSoc" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">Eylül 2025 — Temmuz 2026</span>
+            <h3 data-i18n="leadership.title">IEEE Communications Society (ComSoc) Başkanı</h3>
+            <p class="role">İstanbul Medipol Üniversitesi</p>
+            <ul>
+              <li data-i18n="leadership.desc">Mühendislik öğrencilerinin sektörel gelişimini desteklemek amacıyla kaynak yönetimi, organizasyon planlaması ve teknoloji seminerleri koordinasyonunu sağladım.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 data-i18n="projects.title">Projeler</h2>
+
+      <div class="projects-grid">
+        <article class="glass-card project-card">
+          <h3>VoltPilot</h3>
+          <span class="muted project-date" data-i18n="projects.voltpilot.date">Nisan 2026 — Haziran 2026</span>
+          <p data-i18n="projects.voltpilot.desc">EV şarj altyapısı yatırımları öncesinde tesislerin elektriksel şebeke kapasitelerini analiz eden veri tabanlı bir mühendislik simülasyon projesi.</p>
+          <div class="project-tags">
+            <span class="tag">TypeScript</span><span class="tag" data-i18n="projects.tag.simulation">Simülasyon</span><span class="tag" data-i18n="projects.tag.grid">Şebeke Analizi</span>
+          </div>
+
+          <button class="project-toggle" data-i18n="projects.toggle.show">Detayları Gör ↓</button>
+          <dl class="project-detail">
+            <div class="detail-row"><dt data-i18n="projects.detail.problem">Problem</dt><dd data-i18n="projects.voltpilot.problem">EV şarj altyapısı yatırımı yapacak tesisler, mevcut şebeke kapasitesinin yeterli olup olmadığını önceden bilemiyordu.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.approach">Yaklaşım</dt><dd data-i18n="projects.voltpilot.approach">Tesislerin elektriksel şebeke kapasitesini analiz eden, veri tabanlı bir mühendislik simülasyonu geliştirdim.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.result">Sonuç</dt><dd data-i18n="projects.voltpilot.result">Yatırım kararlarını veriye dayandıran, çalışan bir simülasyon aracı ortaya çıktı.</dd></div>
+          </dl>
+          <a href="https://github.com/emrefbulut/VoltPilot" target="_blank" rel="noopener" class="project-link">GitHub <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="glass-card project-card">
+          <h3>RoomGate-AI</h3>
+          <span class="muted project-date" data-i18n="projects.roomgate.date">Mayıs 2026 — Haziran 2026</span>
+          <p data-i18n="projects.roomgate.desc">Bilgisayarlı görüyü donanım kontrolüyle birleştiren yapay zeka destekli bir güvenlik prototipi. Uç (edge) cihazlar için optimize edilmiş bir YOLOv8 nesne tespit modelini röle tabanlı bir kilit sistemine entegre ettim.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag">YOLOv8</span><span class="tag" data-i18n="skills.tag.edge">Edge Computing</span><span class="tag" data-i18n="projects.tag.access">Erişim Kontrolü</span>
+          </div>
+
+          <button class="project-toggle" data-i18n="projects.toggle.show">Detayları Gör ↓</button>
+          <dl class="project-detail">
+            <div class="detail-row"><dt data-i18n="projects.detail.problem">Problem</dt><dd data-i18n="projects.roomgate.problem">Oda/kapı erişimini ve doluluğunu donanımla entegre, güvenli bir şekilde otomatik olarak izleyebilecek hafif bir sisteme ihtiyaç vardı.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.approach">Yaklaşım</dt><dd data-i18n="projects.roomgate.approach">Uç (edge) cihazlarda çalışacak şekilde optimize edilmiş bir YOLOv8 nesne tespit modeli geliştirip, röle tabanlı bir kilit mekanizmasına entegre ettim.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.result">Sonuç</dt><dd data-i18n="projects.roomgate.result">Bilgisayarlı görüyü donanım kontrolüyle birleştiren, çalışan bir akıllı erişim ve doluluk takip prototipi ortaya çıktı.</dd></div>
+          </dl>
+          <a href="https://github.com/emrefbulut/RoomGate-AI" target="_blank" rel="noopener" class="project-link">GitHub <i class="fas fa-arrow-right"></i></a>
+        </article>
+      </div>
+
+      <h3 class="mini-projects-title" data-i18n="projects.mini.title">Mini Projeler</h3>
+      <div class="mini-projects-grid">
+        <div class="mini-project">
+          <h4 data-i18n="projects.autonomous.solar.title">3-Eksenli Güneş Takip Sistemi</h4>
+          <p data-i18n="projects.autonomous.solar.desc">Güneş enerjisi verimliliğini maksimize etmek amacıyla Python tabanlı sensör otomasyon projesi.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag" data-i18n="projects.tag.sensors">Sensör Otomasyonu</span>
+          </div>
+        </div>
+        <div class="mini-project">
+          <h4 data-i18n="projects.autonomous.iot.title">Akıllı Yük Atma (IoT)</h4>
+          <p data-i18n="projects.autonomous.iot.desc">Kurumsal enerji tüketimini gerçek zamanlı loglayan ve MQTT üzerinden aşırı yüklenmeleri önleyen telemetri prototipleri.</p>
+          <div class="project-tags">
+            <span class="tag">IoT</span><span class="tag">MQTT</span>
+          </div>
+          <a href="https://github.com/emrefbulut/IoT-Smart-Energy-Monitor" target="_blank" rel="noopener" class="project-link">GitHub <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section class="section" id="interests">
+    <div class="container">
+      <h2 data-i18n="interests.title">İlgi Alanları</h2>
+      <div class="interest-chips">
+        <span class="tag interest-chip" data-i18n="interests.cv">Bilgisayarlı Görü &amp; Yapay Zeka</span>
+        <span class="tag interest-chip" data-i18n="interests.embedded">Gömülü Sistemler &amp; Robotik</span>
+        <span class="tag interest-chip" data-i18n="interests.energy">Yenilenebilir Enerji &amp; Güç Sistemleri</span>
+        <span class="tag interest-chip" data-i18n="interests.iot">IoT &amp; Telemetri</span>
+        <span class="tag interest-chip" data-i18n="interests.infra">Sistem Mimarisi &amp; Sanallaştırma</span>
+        <span class="tag interest-chip" data-i18n="interests.startup">Girişimcilik &amp; Ürün Geliştirme</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills" style="background: linear-gradient(to top, var(--bg-dark), rgba(255,255,255,0.02));">
+    <div class="container">
+      <h2 data-i18n="skills.title">Teknik Yetkinlikler</h2>
+
+      <div class="skills-grid">
+        <div class="glass-card skill-card">
+          <h3 data-i18n="skills.ai.title">Yapay Zeka &amp; Görüntü İşleme</h3>
+          <div class="project-tags" style="border-top:none; padding-top:0;">
+            <span class="tag">Computer Vision</span><span class="tag">YOLOv8</span><span class="tag" data-i18n="skills.tag.dataset">Veri Seti Oluşturma</span><span class="tag" data-i18n="skills.tag.labeling">Veri Etiketleme</span><span class="tag" data-i18n="skills.tag.finetune">Model Eğitimi (Fine-Tuning)</span>
+          </div>
+        </div>
+        <div class="glass-card skill-card">
+          <h3 data-i18n="skills.prog.title">Programlama &amp; Haberleşme</h3>
+          <div class="project-tags" style="border-top:none; padding-top:0;">
+            <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span><span class="tag">REST API</span><span class="tag">MQTT</span>
+          </div>
+        </div>
+        <div class="glass-card skill-card">
+          <h3 data-i18n="skills.sys.title">Sistem &amp; Altyapı</h3>
+          <div class="project-tags" style="border-top:none; padding-top:0;">
+            <span class="tag">VMware vSphere</span><span class="tag">Red Hat Enterprise Linux</span><span class="tag" data-i18n="skills.tag.virt">Kurumsal Sanallaştırma</span><span class="tag" data-i18n="skills.tag.network">Ağ Topolojileri</span>
+          </div>
+        </div>
+        <div class="glass-card skill-card">
+          <h3 data-i18n="skills.eng.title">Mühendislik Prensipleri</h3>
+          <div class="project-tags" style="border-top:none; padding-top:0;">
+            <span class="tag">OOP</span><span class="tag" data-i18n="skills.tag.algo">Algoritma Tasarımı</span><span class="tag" data-i18n="skills.tag.arch">Sistem Mimarisi</span><span class="tag">Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container">
+    <h2 data-i18n="contact.title" style="margin-bottom: 1rem;">Birlikte Çalışalım</h2>
+    <p class="contact-intro" data-i18n="contact.intro">Bir proje, staj fırsatı ya da sadece mühendislik üzerine sohbet etmek için bana ulaşabilirsin.</p>
+
+    <a href="mailto:emrebulutf&#64;gmail&#46;com" class="contact-email">emrebulutf&#64;gmail&#46;com</a>
+
+    <div class="social-links">
+      <a href="mailto:emrebulutf@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/emre-bulut-212b42200/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/emrefbulut" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+
+    <a href="assets/cv/Emre_Bulut_CV.pdf" download class="btn btn-outline" data-i18n="contact.cvBtn">CV ↓</a>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Emre Bulut. <span data-i18n="footer.made">İstanbul, Türkiye'den sevgiyle inşa edildi.</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/script.js?v=2"></script>
+</body>
+</html>
