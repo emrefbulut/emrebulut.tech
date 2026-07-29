@@ -233,7 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Seamless Video Loop (dip through the backdrop instead of a hard jump-cut) ---
-  const bgVideo = document.querySelector('.site-bg-video');
+  // Az hareket tercihi aciksa video CSS ile gizleniyor; gorunmeyen bir ogeye
+  // saniyede 60 kez opaklik hesaplamanin anlami yok - dongu hic baslatilmaz.
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const bgVideo = prefersReducedMotion ? null : document.querySelector('.site-bg-video');
   if (bgVideo) {
     const FADE = 0.6; // seconds faded at each end of the loop
     let lastOpacity = null;
