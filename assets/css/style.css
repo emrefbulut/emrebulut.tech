@@ -250,8 +250,15 @@ p {
 .lang-toggle:hover {
     border-color: var(--accent-bright);
 }
+/* Dil secenekleri artik gercek baglanti; varsayilan baglanti gorunumu sifirlanip
+   onceki span gorunumu birebir korunuyor. */
 .lang-option {
     padding: 2px;
+    color: inherit;
+    text-decoration: none;
+}
+.lang-option:hover {
+    color: var(--accent-bright);
 }
 .lang-option.active {
     color: var(--accent-bright);

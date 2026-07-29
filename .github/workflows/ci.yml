@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # en/index.html, index.html'den uretilir ve commit'lenir. Turkce sayfa
+      # degisip Ingilizcesi yeniden uretilmezse iki dil sessizce ayrisir; bu adim
+      # tam olarak onu yakalar.
+      - name: Verify the English page is in sync
+        run: node scripts/build-en.mjs --check

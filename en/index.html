@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- Guvenlik: GitHub Pages ozel HTTP basligi desteklemedigi icin CSP meta ile taniniyor.
+     script-src 'self' -> disaridan enjekte edilen hicbir betik calisamaz.
+     style-src 'unsafe-inline' zorunlu: sayfada 16 adet inline style ozniteligi var. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1c0a1c">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Emre Bulut | Electrical &amp; Electronics Engineering Student</title>
+<meta name="description" content="Emre Bulut - Electrical and Electronics Engineering student. Projects across computer vision, embedded systems, and energy systems.">
+<meta name="author" content="Emre Bulut">
+
+<!-- Dil surumleri: Ingilizce icerik ayri bir URL'de yayinlaniyor, boylece arama
+     motorlari iki surumu de indeksleyebiliyor ve baglanti paylasilabiliyor. -->
+<link rel="alternate" hreflang="tr" href="https://emrebulut.tech/">
+<link rel="alternate" hreflang="en" href="https://emrebulut.tech/en/">
+<link rel="alternate" hreflang="x-default" href="https://emrebulut.tech/">
+
+<!-- Open Graph / sosyal paylaşım -->
+<link rel="canonical" href="https://emrebulut.tech/en/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://emrebulut.tech/en/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:site_name" content="Emre Bulut">
+<meta property="og:title" content="Emre Bulut | Electrical &amp; Electronics Engineering Student">
+<meta property="og:description" content="Electrical and electronics engineering student building projects across computer vision, embedded systems, and energy systems.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Emre Bulut | Electrical &amp; Electronics Engineering Student">
+<meta name="twitter:description" content="Electrical and electronics engineering student building projects across computer vision, embedded systems, and energy systems.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%23f0a6ff%22/><stop offset=%221%22 stop-color=%22%237a2e6b%22/></linearGradient></defs><text x=%2250%22 y=%2270%22 font-family=%22Arial, sans-serif%22 font-weight=%22800%22 font-size=%2258%22 fill=%22url(%23g)%22 text-anchor=%22middle%22>EB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=21">
+</head>
+<body>
+
+<!-- Arka plan videosu (1.6 MB) bilerek isaretlemede degil. Tamamen dekoratif
+     oldugu icin script.js onu yalnizca genis ekranda, az-hareket tercihi kapaliyken
+     ve veri tasarrufu/yavas baglanti bildirilmemisken olusturur. CSS ile gizlemek
+     indirmeyi durdurmaz; ogeyi hic yaratmamak durdurur. -->
+<div class="site-bg-overlay" aria-hidden="true"></div>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top" data-i18n-aria="aria.scrollTop">↑</button>
+
+<header class="site-header" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="#top" class="logo">
+      <span class="logo-text">Emre Bulut</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#education" data-i18n="nav.education">Education</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#interests" data-i18n="nav.interests">Interests</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- Dil secimi gercek bir baglanti: URL durumu tasidigi icin secim
+           yenilemede kaybolmuyor, paylasilabiliyor ve indekslenebiliyor. -->
+      <nav class="lang-toggle" aria-label="Language">
+        <a class="lang-option" href="/" hreflang="tr">TR</a>
+        <span class="lang-sep">|</span>
+        <a class="lang-option active" href="/en/" hreflang="en" aria-current="page">EN</a>
+      </nav>
+      <a class="btn btn-ghost btn-small cv-link" href="../assets/cv/Emre_Bulut_CV.pdf" download data-i18n="nav.cv" style="background:transparent; border:1px solid var(--border); padding: 5px 12px; border-radius:12px; color:var(--text-muted); font-size: 0.85rem;">CV</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" data-i18n-aria="aria.menu" aria-controls="mainNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span data-i18n="hero.hi">Hi, I'm</span>
+          <span class="name-ink">Emre</span> <span class="name-accent">Bulut</span>
+        </h1>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">View My Work</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero.cta.contact">Get in Touch</a>
+        </div>
+        <div class="social-links" style="margin-top: 2rem;">
+          <a href="https://github.com/emrefbulut" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 496 512" fill="currentColor" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/emre-bulut-212b42200/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+          </a>
+          <a href="mailto:emrebulutf@gmail.com" class="social-icon" aria-label="Email">
+            <svg class="icon" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <button class="scroll-cue" id="scrollCue" aria-label="Scroll down" data-i18n-aria="hero.scrollCueAria">
+      <span class="scroll-cue-label" data-i18n="hero.scrollDown">Scroll</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </button>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 data-i18n="about.title">Who Am I?</h2>
+
+      <div class="about-layout">
+        <p class="about-bio" data-i18n="about.p1">As an Electrical and Electronics Engineering student, my work is centered around computer vision, model training, and hardware-software integration. By combining my system and virtualization experience gained in enterprise IT infrastructures with my object-oriented programming capabilities, I develop analytical solutions to complex engineering problems. With strong communication skills honed through leadership roles and teamwork, I aim to develop innovative, scalable technologies fully compliant with engineering standards.</p>
+
+        <dl class="about-facts">
+          <div class="about-fact">
+            <dt data-i18n="about.stat.location.label">Location</dt>
+            <dd>Istanbul, Türkiye</dd>
+          </div>
+          <div class="about-fact">
+            <dt data-i18n="about.stat.uni.label">University</dt>
+            <dd>Istanbul Medipol Univ.</dd>
+          </div>
+          <div class="about-fact">
+            <dt data-i18n="about.stat.field.label">Major</dt>
+            <dd data-i18n="about.stat.field.value">Electrical-Electronics Eng.</dd>
+          </div>
+          <div class="about-fact">
+            <dt data-i18n="about.stat.lang.label">Languages</dt>
+            <dd data-i18n="about.stat.lang.value">Turkish, English (Advanced)</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 data-i18n="education.title">Academic Journey</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: white; overflow: hidden;">
+            <img src="../assets/images/logo_medipol.png" alt="Medipol Üniversitesi" width="74" height="74" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">Expected Graduation: June 2028</span>
+            <h3>Istanbul Medipol University</h3>
+            <p data-i18n="education.medipol">Bachelor's Degree, Electrical and Electronics Engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 data-i18n="experience.title">Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: white; display: flex; align-items: center; justify-content: center;">
+            <img src="../assets/images/logo_ziraat_latest.jpg" alt="Ziraat Teknoloji" width="75" height="75" loading="lazy" decoding="async" style="width: 75px; height: 75px; object-fit: contain; transform: translateX(2px) translateY(2px);">
+          </div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date" data-i18n="experience.ziraat.date">July 2026 — August 2026 · 1 mo</span>
+            <h3>Ziraat Teknoloji A.Ş.</h3>
+            <p class="role" data-i18n="experience.ziraat.role">System and Virtualization Engineering Intern (IT Infrastructure &amp; Operations)</p>
+            <ul>
+              <li data-i18n="experience.ziraat.b1">Working on VMware vSphere, VMware Workstation, and virtualization architectures in large-scale enterprise data centers at one of Turkey's largest technology hubs.</li>
+              <li data-i18n="experience.ziraat.b2">Applying terminal-based system management, network topology analysis, and operational business continuity processes on Red Hat Enterprise Linux and Windows Server platforms.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: white; display: flex; align-items: center; justify-content: center;">
+            <img src="../assets/images/logo_emlak.png" alt="Emlak Konut" width="55" height="55" loading="lazy" decoding="async" style="width: 55px; height: 55px; object-fit: contain;">
+          </div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date" data-i18n="experience.gulverdi.date">August 2025 — September 2025 · 1 mo</span>
+            <h3>Gülverdi Elektrik</h3>
+            <p class="role" data-i18n="experience.gulverdi.role">Electrical Engineering Intern (Power Systems &amp; Infrastructure)</p>
+            <ul>
+              <li data-i18n="experience.gulverdi.b1">During my volunteer internship at the Emlak Konut - Adıyaman Merkez Yerinde Dönüşüm project, I gained extensive hands-on experience in the execution of large-scale, turnkey electrical infrastructure and superstructure works.</li>
+              <li data-i18n="experience.gulverdi.b3">Throughout this period, I developed a deep technical proficiency in a wide range of systems, including high voltage systems, civil electrical infrastructure, and complex building wide low current systems.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: white; overflow: hidden;">
+            <img src="../assets/images/logo_ieee.jpg" alt="IEEE ComSoc" width="74" height="74" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">September 2025 — July 2026</span>
+            <h3 data-i18n="leadership.title">IEEE Communications Society (ComSoc) President</h3>
+            <p class="role">Istanbul Medipol University</p>
+            <ul>
+              <li data-i18n="leadership.desc">Managed resource allocation, event planning, and technology seminar coordination to support the professional development of engineering students.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 data-i18n="projects.title">Projects</h2>
+
+      <div class="projects-grid">
+        <article class="glass-card project-card">
+          <h3>VoltPilot</h3>
+          <span class="muted project-date" data-i18n="projects.voltpilot.date">April 2026 — June 2026</span>
+          <p data-i18n="projects.voltpilot.desc">A data-driven engineering simulation project analyzing the electrical grid capacities of facilities prior to EV charging infrastructure investments.</p>
+          <div class="project-tags">
+            <span class="tag">TypeScript</span><span class="tag" data-i18n="projects.tag.simulation">Simulation</span><span class="tag" data-i18n="projects.tag.grid">Grid Analysis</span>
+          </div>
+
+          <button class="project-toggle" data-i18n="projects.toggle.show" data-label-show="View Details ↓" data-label-hide="Hide Details ↑">View Details ↓</button>
+          <dl class="project-detail">
+            <div class="detail-row"><dt data-i18n="projects.detail.problem">Problem</dt><dd data-i18n="projects.voltpilot.problem">Facilities planning EV charging infrastructure investments had no way to know in advance whether their existing grid capacity would suffice.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.approach">Approach</dt><dd data-i18n="projects.voltpilot.approach">I built a data-driven engineering simulation that analyzes a facility's electrical grid capacity.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.result">Result</dt><dd data-i18n="projects.voltpilot.result">A working simulation tool that grounds investment decisions in data.</dd></div>
+          </dl>
+          <a href="https://github.com/emrefbulut/VoltPilot" target="_blank" rel="noopener" class="project-link">GitHub →</a>
+        </article>
+
+        <article class="glass-card project-card">
+          <h3>RoomGate-AI</h3>
+          <span class="muted project-date" data-i18n="projects.roomgate.date">May 2026 — June 2026</span>
+          <p data-i18n="projects.roomgate.desc">An AI-driven security prototype bridging computer vision with hardware control. I developed an edge-optimized YOLO26 object detection model and integrated it with a relay-based lock system.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag">YOLO26</span><span class="tag" data-i18n="skills.tag.edge">Edge Computing</span><span class="tag" data-i18n="projects.tag.access">Access Control</span>
+          </div>
+
+          <button class="project-toggle" data-i18n="projects.toggle.show" data-label-show="View Details ↓" data-label-hide="Hide Details ↑">View Details ↓</button>
+          <dl class="project-detail">
+            <div class="detail-row"><dt data-i18n="projects.detail.problem">Problem</dt><dd data-i18n="projects.roomgate.problem">Room/door access and occupancy needed a lightweight system that could monitor and control entry automatically, with real hardware integration.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.approach">Approach</dt><dd data-i18n="projects.roomgate.approach">I developed an edge-optimized YOLO26 object detection model and integrated it with a relay-based lock mechanism.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.result">Result</dt><dd data-i18n="projects.roomgate.result">A working smart access and occupancy monitoring prototype that bridges computer vision with hardware control.</dd></div>
+          </dl>
+          <a href="https://github.com/emrefbulut/RoomGate-AI" target="_blank" rel="noopener" class="project-link">GitHub →</a>
+        </article>
+      </div>
+
+      <h3 class="mini-projects-title" data-i18n="projects.mini.title">Mini Projects</h3>
+      <div class="mini-projects-grid">
+        <div class="mini-project">
+          <h4 data-i18n="projects.autonomous.solar.title">3-Axis Solar Tracking System</h4>
+          <p data-i18n="projects.autonomous.solar.desc">A Python-based sensor automation project to maximize solar energy efficiency.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag" data-i18n="projects.tag.sensors">Sensor Automation</span>
+          </div>
+        </div>
+        <div class="mini-project">
+          <h4 data-i18n="projects.autonomous.iot.title">Smart Load Shedding (IoT)</h4>
+          <p data-i18n="projects.autonomous.iot.desc">Built telemetry prototypes that log enterprise energy consumption in real-time and prevent critical infrastructure overloads via MQTT.</p>
+          <div class="project-tags">
+            <span class="tag">IoT</span><span class="tag">MQTT</span>
+          </div>
+          <a href="https://github.com/emrefbulut/IoT-Smart-Energy-Monitor" target="_blank" rel="noopener" class="project-link">GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section class="section" id="interests">
+    <div class="container">
+      <h2 data-i18n="interests.title">Interests</h2>
+      <div class="interest-chips">
+        <span class="tag interest-chip" data-i18n="interests.cv">Computer Vision &amp; AI</span>
+        <span class="tag interest-chip" data-i18n="interests.embedded">Embedded Systems &amp; Robotics</span>
+        <span class="tag interest-chip" data-i18n="interests.energy">Renewable Energy &amp; Power Systems</span>
+        <span class="tag interest-chip" data-i18n="interests.iot">IoT &amp; Telemetry</span>
+        <span class="tag interest-chip" data-i18n="interests.infra">System Architecture &amp; Virtualization</span>
+        <span class="tag interest-chip" data-i18n="interests.startup">Entrepreneurship &amp; Product Development</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills" style="background: linear-gradient(to top, var(--bg-dark), rgba(255,255,255,0.02));">
+    <div class="container">
+      <h2 data-i18n="skills.title">Technical Expertise</h2>
+
+      <div class="skills-grid">
+        <div class="glass-card skill-card">
+          <h3 data-i18n="skills.ai.title">AI &amp; Image Processing</h3>
+          <div class="project-tags" style="border-top:none; padding-top:0;">
+            <span class="tag">Computer Vision</span><span class="tag">YOLO26</span><span class="tag" data-i18n="skills.tag.dataset">Dataset Creation</span><span class="tag" data-i18n="skills.tag.labeling">Data Labeling</span><span class="tag" data-i18n="skills.tag.finetune">Model Training (Fine-Tuning)</span>
+          </div>
+        </div>
+        <div class="glass-card skill-card">
+          <h3 data-i18n="skills.prog.title">Programming &amp; Comms</h3>
+          <div class="project-tags" style="border-top:none; padding-top:0;">
+            <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span><span class="tag">REST API</span><span class="tag">MQTT</span>
+          </div>
+        </div>
+        <div class="glass-card skill-card">
+          <h3 data-i18n="skills.sys.title">System &amp; Infrastructure</h3>
+          <div class="project-tags" style="border-top:none; padding-top:0;">
+            <span class="tag">VMware vSphere</span><span class="tag">Red Hat Enterprise Linux</span><span class="tag" data-i18n="skills.tag.virt">Enterprise Virtualization</span><span class="tag" data-i18n="skills.tag.network">Network Topologies</span>
+          </div>
+        </div>
+        <div class="glass-card skill-card">
+          <h3 data-i18n="skills.eng.title">Engineering Principles</h3>
+          <div class="project-tags" style="border-top:none; padding-top:0;">
+            <span class="tag">OOP</span><span class="tag" data-i18n="skills.tag.algo">Algorithm Design</span><span class="tag" data-i18n="skills.tag.arch">System Architecture</span><span class="tag">Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container">
+    <h2 data-i18n="contact.title" style="margin-bottom: 1rem;">Let's Work Together</h2>
+    <p class="contact-intro" data-i18n="contact.intro">Feel free to reach out for a project, internship opportunity, or just to chat about engineering.</p>
+
+    <a href="mailto:emrebulutf&#64;gmail&#46;com" class="contact-email">emrebulutf&#64;gmail&#46;com</a>
+
+    <div class="social-links">
+      <a href="mailto:emrebulutf@gmail.com" class="social-icon" aria-label="Email"><svg class="icon" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+      <a href="https://www.linkedin.com/in/emre-bulut-212b42200/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+      <a href="https://github.com/emrefbulut" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><svg class="icon" viewBox="0 0 496 512" fill="currentColor" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg></a>
+    </div>
+
+    <a href="../assets/cv/Emre_Bulut_CV.pdf" download class="btn btn-outline" data-i18n="contact.cvBtn">CV ↓</a>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Emre Bulut. <span data-i18n="footer.made">Built with passion in Istanbul, Turkey.</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/script.js?v=7"></script>
+</body>
+</html>

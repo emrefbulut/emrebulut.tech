@@ -17,11 +17,18 @@
 <meta name="description" content="Emre Bulut - Elektrik ve Elektronik Mühendisliği öğrencisi. Bilgisayarlı görü, gömülü sistemler ve enerji sistemleri üzerine projeler.">
 <meta name="author" content="Emre Bulut">
 
+<!-- Dil surumleri: Ingilizce icerik ayri bir URL'de yayinlaniyor, boylece arama
+     motorlari iki surumu de indeksleyebiliyor ve baglanti paylasilabiliyor. -->
+<link rel="alternate" hreflang="tr" href="https://emrebulut.tech/">
+<link rel="alternate" hreflang="en" href="https://emrebulut.tech/en/">
+<link rel="alternate" hreflang="x-default" href="https://emrebulut.tech/">
+
 <!-- Open Graph / sosyal paylaşım -->
 <link rel="canonical" href="https://emrebulut.tech/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://emrebulut.tech/">
 <meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="Emre Bulut">
 <meta property="og:title" content="Emre Bulut | Elektrik-Elektronik Mühendisliği Öğrencisi">
 <meta property="og:description" content="Bilgisayarlı görü, gömülü sistemler ve enerji sistemleri üzerine projeler geliştiren EEE öğrencisi.">
@@ -33,11 +40,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20">
+<link rel="stylesheet" href="assets/css/style.css?v=21">
 </head>
 <body>
 
-<video class="site-bg-video" autoplay muted loop playsinline aria-hidden="true" src="assets/video/bg-flow.mp4"></video>
+<!-- Arka plan videosu (1.6 MB) bilerek isaretlemede degil. Tamamen dekoratif
+     oldugu icin script.js onu yalnizca genis ekranda, az-hareket tercihi kapaliyken
+     ve veri tasarrufu/yavas baglanti bildirilmemisken olusturur. CSS ile gizlemek
+     indirmeyi durdurmaz; ogeyi hic yaratmamak durdurur. -->
 <div class="site-bg-overlay" aria-hidden="true"></div>
 
 <button class="scroll-top" id="scrollTop" aria-label="Yukarı çık" data-i18n-aria="aria.scrollTop">↑</button>
@@ -59,11 +69,13 @@
     </nav>
 
     <div class="nav-actions">
-      <button class="lang-toggle" id="langToggle" aria-label="Dil değiştir" data-i18n-aria="aria.langToggle">
-        <span class="lang-option active" data-lang="tr">TR</span>
+      <!-- Dil secimi gercek bir baglanti: URL durumu tasidigi icin secim
+           yenilemede kaybolmuyor, paylasilabiliyor ve indekslenebiliyor. -->
+      <nav class="lang-toggle" aria-label="Dil seçimi">
+        <a class="lang-option active" href="/" hreflang="tr" aria-current="page">TR</a>
         <span class="lang-sep">|</span>
-        <span class="lang-option" data-lang="en">EN</span>
-      </button>
+        <a class="lang-option" href="/en/" hreflang="en">EN</a>
+      </nav>
       <a class="btn btn-ghost btn-small cv-link" href="assets/cv/Emre_Bulut_CV.pdf" download data-i18n="nav.cv" style="background:transparent; border:1px solid var(--border); padding: 5px 12px; border-radius:12px; color:var(--text-muted); font-size: 0.85rem;">CV</a>
       <button class="hamburger" id="hamburger" aria-label="Menü" data-i18n-aria="aria.menu" aria-controls="mainNav" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -230,7 +242,7 @@
             <span class="tag">TypeScript</span><span class="tag" data-i18n="projects.tag.simulation">Simülasyon</span><span class="tag" data-i18n="projects.tag.grid">Şebeke Analizi</span>
           </div>
 
-          <button class="project-toggle" data-i18n="projects.toggle.show">Detayları Gör ↓</button>
+          <button class="project-toggle" data-i18n="projects.toggle.show" data-label-show="Detayları Gör ↓" data-label-hide="Detayları Gizle ↑">Detayları Gör ↓</button>
           <dl class="project-detail">
             <div class="detail-row"><dt data-i18n="projects.detail.problem">Problem</dt><dd data-i18n="projects.voltpilot.problem">EV şarj altyapısı yatırımı yapacak tesisler, mevcut şebeke kapasitesinin yeterli olup olmadığını önceden bilemiyordu.</dd></div>
             <div class="detail-row"><dt data-i18n="projects.detail.approach">Yaklaşım</dt><dd data-i18n="projects.voltpilot.approach">Tesislerin elektriksel şebeke kapasitesini analiz eden, veri tabanlı bir mühendislik simülasyonu geliştirdim.</dd></div>
@@ -244,10 +256,10 @@
           <span class="muted project-date" data-i18n="projects.roomgate.date">Mayıs 2026 — Haziran 2026</span>
           <p data-i18n="projects.roomgate.desc">Bilgisayarlı görüyü donanım kontrolüyle birleştiren yapay zeka destekli bir güvenlik prototipi. Uç (edge) cihazlar için optimize edilmiş bir YOLOv8 nesne tespit modelini röle tabanlı bir kilit sistemine entegre ettim.</p>
           <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">YOLOv8</span><span class="tag" data-i18n="skills.tag.edge">Edge Computing</span><span class="tag" data-i18n="projects.tag.access">Erişim Kontrolü</span>
+            <span class="tag">Python</span><span class="tag">YOLO26</span><span class="tag" data-i18n="skills.tag.edge">Edge Computing</span><span class="tag" data-i18n="projects.tag.access">Erişim Kontrolü</span>
           </div>
 
-          <button class="project-toggle" data-i18n="projects.toggle.show">Detayları Gör ↓</button>
+          <button class="project-toggle" data-i18n="projects.toggle.show" data-label-show="Detayları Gör ↓" data-label-hide="Detayları Gizle ↑">Detayları Gör ↓</button>
           <dl class="project-detail">
             <div class="detail-row"><dt data-i18n="projects.detail.problem">Problem</dt><dd data-i18n="projects.roomgate.problem">Oda/kapı erişimini ve doluluğunu donanımla entegre, güvenli bir şekilde otomatik olarak izleyebilecek hafif bir sisteme ihtiyaç vardı.</dd></div>
             <div class="detail-row"><dt data-i18n="projects.detail.approach">Yaklaşım</dt><dd data-i18n="projects.roomgate.approach">Uç (edge) cihazlarda çalışacak şekilde optimize edilmiş bir YOLOv8 nesne tespit modeli geliştirip, röle tabanlı bir kilit mekanizmasına entegre ettim.</dd></div>
@@ -302,7 +314,7 @@
         <div class="glass-card skill-card">
           <h3 data-i18n="skills.ai.title">Yapay Zeka &amp; Görüntü İşleme</h3>
           <div class="project-tags" style="border-top:none; padding-top:0;">
-            <span class="tag">Computer Vision</span><span class="tag">YOLOv8</span><span class="tag" data-i18n="skills.tag.dataset">Veri Seti Oluşturma</span><span class="tag" data-i18n="skills.tag.labeling">Veri Etiketleme</span><span class="tag" data-i18n="skills.tag.finetune">Model Eğitimi (Fine-Tuning)</span>
+            <span class="tag">Computer Vision</span><span class="tag">YOLO26</span><span class="tag" data-i18n="skills.tag.dataset">Veri Seti Oluşturma</span><span class="tag" data-i18n="skills.tag.labeling">Veri Etiketleme</span><span class="tag" data-i18n="skills.tag.finetune">Model Eğitimi (Fine-Tuning)</span>
           </div>
         </div>
         <div class="glass-card skill-card">
@@ -350,6 +362,6 @@
   </div>
 </footer>
 
-<script src="assets/js/script.js?v=5"></script>
+<script src="assets/js/script.js?v=7"></script>
 </body>
 </html>
