@@ -121,7 +121,7 @@ export const translations = {
       "Güneş enerjisi verimliliğini maksimize etmek amacıyla Python tabanlı sensör otomasyon projesi.",
     "projects.autonomous.iot.title": "Akıllı Yük Atma (IoT)",
     "projects.autonomous.iot.desc":
-      "Kurumsal enerji tüketimini gerçek zamanlı loglayan ve MQTT üzerinden aşırı yüklenmeleri önleyen telemetri prototipleri.",
+      "ESP32'den gelen enerji telemetrisini işleyip eşik aşıldığında röleyle yükü otomatik kesen sistem. Histerezis ve doğrulama penceresiyle röle korunuyor; telemetri, uyarılar ve yük atma olayları MQTT'ye yayınlanıyor.",
     "projects.tag.sensors": "Sensör Otomasyonu",
     "projects.mini.title": "Mini Projeler",
 
@@ -240,7 +240,7 @@ export const translations = {
       "A Python-based sensor automation project to maximize solar energy efficiency.",
     "projects.autonomous.iot.title": "Smart Load Shedding (IoT)",
     "projects.autonomous.iot.desc":
-      "Built telemetry prototypes that log enterprise energy consumption in real-time and prevent critical infrastructure overloads via MQTT.",
+      "Processes energy telemetry from an ESP32 and sheds load through a relay when a threshold is crossed. Hysteresis and a confirmation window protect the relay; telemetry, alerts, and shedding events are published over MQTT.",
     "projects.tag.sensors": "Sensor Automation",
     "projects.mini.title": "Mini Projects",
 
