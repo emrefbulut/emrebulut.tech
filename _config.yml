@@ -8,3 +8,6 @@
 
 exclude:
   - README.md
+  # Ingilizce sayfa uretecinin kaynaklari yalnizca build zamaninda kullanilir;
+  # yayinlanan sitede yerleri yok.
+  - scripts/
