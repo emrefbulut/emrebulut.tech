@@ -43,13 +43,72 @@ function replaceOnce(html, pattern, replacement, description) {
   return html.replace(pattern, replacement);
 }
 
+/** data-i18n tasiyan ogelerin acilis etiketi, anahtari ve ic metni. */
+const I18N_ELEMENT = /(<(\w+)(?=[^>]*\sdata-i18n="([^"]+)")[^>]*>)([\s\S]*?)(<\/\2>)/g;
+
+function normalizeText(value) {
+  return value.replace(/\s+/g, " ").trim();
+}
+
+/**
+ * Satir sonlarini LF'e sabitler.
+ *
+ * Windows'ta git, calisma agacina dosyalari CRLF ile yaziyor. Uretecin ciktisi
+ * girdinin satir sonlarini tasidigi icin, ayni kaynaktan Windows'ta CRLF'li,
+ * Linux'ta LF'li dosya cikiyordu; `--check` yerelde surekli basarisiz olurken
+ * CI'da geciyordu. Iki tarafi da LF'e sabitlemek karsilastirmayi platformdan
+ * bagimsiz kiliyor.
+ */
+function normalizeLineEndings(value) {
+  return value.replace(/\r\n/g, "\n");
+}
+
+/**
+ * index.html'deki satir ici Turkce metnin sozlukle ayni oldugunu dogrular.
+ *
+ * Turkce metin iki yerde yasiyor: kaynak isaretlemede ve `translations.tr`
+ * icinde. Ureteci yalnizca Ingilizce sayfa icin sozluge bakiyor, dolayisiyla
+ * biri guncellenip digeri unutuldugunda iki dil sessizce farkli seyler soyler.
+ * Bu kontrol o kaymayi build zamaninda yakalar.
+ */
+function verifyTurkishSource(html, dictionary) {
+  const mismatches = [];
+
+  for (const match of html.matchAll(I18N_ELEMENT)) {
+    const key = match[3];
+    const expected = dictionary[key];
+    if (expected === undefined) {
+      continue; // Eksik anahtari translateElements zaten bildiriyor.
+    }
+
+    const inline = normalizeText(match[4]);
+    if (inline !== normalizeText(escapeHtml(expected))) {
+      mismatches.push({ key, inline, expected });
+    }
+  }
+
+  if (mismatches.length > 0) {
+    const detail = mismatches
+      .map(
+        (item) =>
+          `  ${item.key}\n    index.html : ${item.inline}\n    i18n.mjs   : ${item.expected}`
+      )
+      .join("\n");
+
+    throw new Error(
+      `index.html ile scripts/i18n.mjs'deki Turkce metinler ayrismis:\n${detail}\n` +
+        "Iki tarafi esitleyin; aksi halde Turkce ve Ingilizce sayfalar farkli sey soyler."
+    );
+  }
+}
+
 function translateElements(html, dictionary) {
   const missing = new Set();
 
   // data-i18n tasiyan ogeler yalnizca duz metin icerir (icice ayni etiket yok),
   // bu yuzden acilis etiketi ile ilk kapanis etiketi arasi guvenle degistirilebilir.
   const translated = html.replace(
-    /(<(\w+)(?=[^>]*\sdata-i18n="([^"]+)")[^>]*>)([\s\S]*?)(<\/\2>)/g,
+    I18N_ELEMENT,
     (match, openTag, _tagName, key, _inner, closeTag) => {
       const value = dictionary[key];
       if (value === undefined) {
@@ -115,6 +174,10 @@ function buildEnglishPage(source) {
   const dictionary = translations.en;
   const meta = pageMeta.en;
   let html = source;
+
+  // Once Turkce kaynak ile sozlugun ayni oldugunu dogrula: kayma varsa
+  // Ingilizce sayfayi uretmek sorunu gizlemekten baska ise yaramaz.
+  verifyTurkishSource(html, translations.tr);
 
   html = translateElements(html, dictionary);
   html = translateAriaLabels(html, dictionary);
@@ -193,14 +256,14 @@ function buildEnglishPage(source) {
 }
 
 async function main() {
-  const source = await readFile(SOURCE, "utf8");
+  const source = normalizeLineEndings(await readFile(SOURCE, "utf8"));
   const generated = buildEnglishPage(source);
   const checkOnly = process.argv.includes("--check");
 
   if (checkOnly) {
     let existing = null;
     try {
-      existing = await readFile(TARGET, "utf8");
+      existing = normalizeLineEndings(await readFile(TARGET, "utf8"));
     } catch {
       existing = null;
     }
