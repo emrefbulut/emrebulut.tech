@@ -228,6 +228,23 @@
 
       <div class="projects-grid">
         <article class="glass-card project-card">
+          <h3>IQForge</h3>
+          <span class="muted project-date" data-i18n="projects.iqforge.date">2026</span>
+          <p data-i18n="projects.iqforge.desc">A tool that turns software-defined radio (SDR) captures into PyTorch datasets without silently corrupting them. Windows from the same recording always land in the same split, which rules out train/test leakage structurally.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag" data-i18n="projects.tag.sdr">SDR / RF</span><span class="tag" data-i18n="projects.tag.dataleak">Leakage Prevention</span>
+          </div>
+
+          <button class="project-toggle" data-i18n="projects.toggle.show" data-label-show="View Details ↓" data-label-hide="Hide Details ↑">View Details ↓</button>
+          <dl class="project-detail">
+            <div class="detail-row"><dt data-i18n="projects.detail.problem">Problem</dt><dd data-i18n="projects.iqforge.problem">When SDR captures are cut into windows, neighbouring windows share samples. A naive split scatters them across train and test, inflating reported accuracy by as much as 13.6 points.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.approach">Approach</dt><dd data-i18n="projects.iqforge.approach">I built a pipeline that splits at the recording level rather than the window level: it reads SigMF files directly, takes labels from SigMF annotations, directory structure, or CSV, and balances metadata fields that would otherwise introduce hidden correlations.</dd></div>
+            <div class="detail-row"><dt data-i18n="projects.detail.result">Result</dt><dd data-i18n="projects.iqforge.result">A tool that halts with an explanatory error instead of silently falling back when stratification becomes structurally impossible, and writes the configuration, label map, and split assignments into every dataset it produces so results stay reproducible.</dd></div>
+          </dl>
+          <a href="https://github.com/emrefbulut/iqforge" target="_blank" rel="noopener" class="project-link">GitHub →</a>
+        </article>
+
+        <article class="glass-card project-card">
           <h3>VoltPilot</h3>
           <span class="muted project-date" data-i18n="projects.voltpilot.date">April 2026 — June 2026</span>
           <p data-i18n="projects.voltpilot.desc">A data-driven engineering simulation project analyzing the electrical grid capacities of facilities prior to EV charging infrastructure investments.</p>

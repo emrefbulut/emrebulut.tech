@@ -75,6 +75,7 @@ assets/
 
 | Proje | Repo |
 | :--- | :--- |
+| IQForge — SDR kayıtlarından sızıntısız PyTorch veri setleri | [emrefbulut/iqforge](https://github.com/emrefbulut/iqforge) |
 | VoltPilot — EV şarj öncesi şebeke kapasite analizi | [emrefbulut/VoltPilot](https://github.com/emrefbulut/VoltPilot) |
 | RoomGate AI — doluluk tabanlı kapı kontrolü | [emrefbulut/RoomGate-AI](https://github.com/emrefbulut/RoomGate-AI) |
 | IoT Smart Energy Monitor — enerji telemetrisi ve yük atma | [emrefbulut/IoT-Smart-Energy-Monitor](https://github.com/emrefbulut/IoT-Smart-Energy-Monitor) |

@@ -137,6 +137,18 @@ export const translations = {
     "projects.tag.access": "Erişim Kontrolü",
     "skills.tag.edge": "Edge Computing",
 
+    "projects.iqforge.date": "2026",
+    "projects.iqforge.desc":
+      "Yazılım tanımlı radyo (SDR) kayıtlarını, sessizce bozulmadan PyTorch veri setlerine dönüştüren bir araç. Aynı kayıttan gelen pencerelerin her zaman aynı bölmeye düşmesini garanti ederek eğitim/test sızıntısını yapısal olarak engelliyor.",
+    "projects.iqforge.problem":
+      "SDR kayıtları pencerelere bölünürken komşu pencereler örnek paylaşıyor. Naif bir bölme bu pencereleri hem eğitime hem teste dağıtıyor ve modelin doğruluğunu 13,6 puana varan oranda yanıltıcı biçimde yüksek gösteriyor.",
+    "projects.iqforge.approach":
+      "Bölmeyi pencere yerine kayıt düzeyinde yapan bir hat tasarladım: SigMF dosyalarını doğrudan okuyor, etiketleri SigMF açıklamalarından, klasör yapısından veya CSV'den alabiliyor ve gizli korelasyon yaratan metadata alanlarını bölmeler arasında dengeliyor.",
+    "projects.iqforge.result":
+      "Katmanlandırma yapısal olarak imkânsız hale geldiğinde sessizce geri düşmek yerine açıklayıcı bir hatayla duran; ürettiği her veri setine yapılandırmayı, etiket haritasını ve bölme atamalarını yazarak sonucu yeniden üretilebilir kılan bir araç.",
+    "projects.tag.sdr": "SDR / RF",
+    "projects.tag.dataleak": "Veri Sızıntısı Önleme",
+
     "projects.detail.problem": "Problem",
     "projects.detail.approach": "Yaklaşım",
     "projects.detail.result": "Sonuç",
@@ -255,6 +267,18 @@ export const translations = {
       "A working smart access and occupancy monitoring prototype that bridges computer vision with hardware control.",
     "projects.tag.access": "Access Control",
     "skills.tag.edge": "Edge Computing",
+
+    "projects.iqforge.date": "2026",
+    "projects.iqforge.desc":
+      "A tool that turns software-defined radio (SDR) captures into PyTorch datasets without silently corrupting them. Windows from the same recording always land in the same split, which rules out train/test leakage structurally.",
+    "projects.iqforge.problem":
+      "When SDR captures are cut into windows, neighbouring windows share samples. A naive split scatters them across train and test, inflating reported accuracy by as much as 13.6 points.",
+    "projects.iqforge.approach":
+      "I built a pipeline that splits at the recording level rather than the window level: it reads SigMF files directly, takes labels from SigMF annotations, directory structure, or CSV, and balances metadata fields that would otherwise introduce hidden correlations.",
+    "projects.iqforge.result":
+      "A tool that halts with an explanatory error instead of silently falling back when stratification becomes structurally impossible, and writes the configuration, label map, and split assignments into every dataset it produces so results stay reproducible.",
+    "projects.tag.sdr": "SDR / RF",
+    "projects.tag.dataleak": "Leakage Prevention",
 
     "projects.detail.problem": "Problem",
     "projects.detail.approach": "Approach",
