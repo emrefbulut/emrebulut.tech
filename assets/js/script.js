@@ -164,7 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.project-toggle').forEach(btn => {
     btn.setAttribute('aria-expanded', 'false');
     btn.addEventListener('click', () => {
-      const card = btn.closest('.project-card');
+      // Hem ana proje kartlari hem mini projeler ayni acilir detay yapisini kullaniyor.
+      const card = btn.closest('.project-card, .mini-project');
       const isOpen = card.classList.toggle('is-open');
       btn.setAttribute('aria-expanded', String(isOpen));
       btn.textContent = isOpen

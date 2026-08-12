@@ -148,6 +148,22 @@ export const translations = {
       "Katmanlandırma yapısal olarak imkânsız hale geldiğinde sessizce geri düşmek yerine açıklayıcı bir hatayla duran; ürettiği her veri setine yapılandırmayı, etiket haritasını ve bölme atamalarını yazarak sonucu yeniden üretilebilir kılan bir araç.",
     "projects.tag.sdr": "SDR / RF",
     "projects.tag.dataleak": "Veri Sızıntısı Önleme",
+    "projects.tag.ml": "Makine Öğrenmesi",
+    "projects.tag.dl": "Derin Öğrenme",
+
+    "projects.iot.problem":
+      "Şebeke tüketimini izlemek için sayaç dışında bir yol yoktu; anlık güç, gerilim çökmesi veya düşük güç faktörü gibi anormallikler fark edilemeden geçip gidiyordu.",
+    "projects.iot.approach":
+      "Üç katmanlı bir sistem kurdum: ESP32 + PZEM-004T ile ham AC ölçümü, Python köprüsünde aktif/görünür/reaktif güç ve kümülatif kWh hesabı, üstünde canlı metrikleri ve geçmiş eğilimleri gösteren bir web panosu. Olaylar SQLite'a WAL kipinde asenkron yazılıyor.",
+    "projects.iot.result":
+      "Tüketim sıçraması, gerilim çökmesi/yükselmesi ve düşük güç faktörü için otomatik uyarı üreten; röleyi histerezis ve doğrulama penceresiyle koruyan çalışan bir sistem.",
+
+    "projects.solar.problem":
+      "Sabit açılı güneş panelleri, gün boyunca güneşin konumu değiştiği için üretim kapasitesinin bir kısmını kullanamıyor.",
+    "projects.solar.approach":
+      "Panelin üç eksende konumlanmasını sağlayan, sensör verisiyle güneşi takip eden Python tabanlı bir otomasyon geliştirdim.",
+    "projects.solar.result":
+      "Sabit panele kıyasla gün boyu daha yüksek ışınım açısı yakalayan çalışan bir prototip.",
 
     "projects.detail.problem": "Problem",
     "projects.detail.approach": "Yaklaşım",
@@ -279,6 +295,22 @@ export const translations = {
       "A tool that halts with an explanatory error instead of silently falling back when stratification becomes structurally impossible, and writes the configuration, label map, and split assignments into every dataset it produces so results stay reproducible.",
     "projects.tag.sdr": "SDR / RF",
     "projects.tag.dataleak": "Leakage Prevention",
+    "projects.tag.ml": "Machine Learning",
+    "projects.tag.dl": "Deep Learning",
+
+    "projects.iot.problem":
+      "There was no way to watch grid consumption other than the utility meter, so anomalies like power surges, voltage sags, or a low power factor passed unnoticed.",
+    "projects.iot.approach":
+      "I built a three-tier system: an ESP32 with a PZEM-004T takes raw AC measurements, a Python bridge computes active/apparent/reactive power and cumulative kWh, and a web dashboard shows live metrics and historical trends. Events are written to SQLite asynchronously in WAL mode.",
+    "projects.iot.result":
+      "A working system that raises automatic alerts for consumption surges, voltage sag/swell, and low power factor, while hysteresis and a confirmation window protect the relay.",
+
+    "projects.solar.problem":
+      "Fixed-angle solar panels leave part of their capacity unused, because the sun moves across the sky through the day.",
+    "projects.solar.approach":
+      "I built a Python-based automation that positions the panel across three axes and tracks the sun using sensor readings.",
+    "projects.solar.result":
+      "A working prototype that holds a better angle of incidence through the day than a fixed panel.",
 
     "projects.detail.problem": "Problem",
     "projects.detail.approach": "Approach",

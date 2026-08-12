@@ -85,3 +85,4 @@ assets/
 - E-posta: emrebulutf@gmail.com
 - LinkedIn: [emre-bulut-212b42200](https://www.linkedin.com/in/emre-bulut-212b42200/)
 - GitHub: [@emrefbulut](https://github.com/emrefbulut)
+- PyPI: [emre.bulut](https://pypi.org/user/emre.bulut/)

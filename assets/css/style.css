@@ -573,7 +573,8 @@ p {
     gap: 0.85rem;
 }
 .detail-row { margin: 0; }
-.project-card.is-open .project-detail {
+.project-card.is-open .project-detail,
+.mini-project.is-open .project-detail {
     display: flex;
 }
 
