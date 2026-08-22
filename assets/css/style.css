@@ -163,10 +163,30 @@ p {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
+/* Ust kenarda isik yakalayan sac teli cizgi. Iki ucunda sonumledigi icin
+   yuvarlatilmis koseyle catismiyor; hover'da belirginlesiyor. */
+.glass-card::before,
+.mini-project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(240, 166, 255, 0.38), transparent);
+    opacity: 0.55;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
 .glass-card:hover {
     border-color: var(--accent-soft-border);
-    box-shadow: 0 10px 26px -14px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 12px 30px -14px rgba(0, 0, 0, 0.5), 0 0 24px -18px var(--accent-bright);
     transform: translateY(-2px);
+}
+.glass-card:hover::before,
+.mini-project:hover::before {
+    opacity: 1;
 }
 
 /* Header & Nav */
@@ -434,7 +454,15 @@ p {
     top: 0;
     bottom: -3rem;
     width: 1px;
-    background: var(--border);
+    /* Duz cizgi yerine sonumlenen degrade: goz akisi yukaridan asagi takip ediyor,
+       ust ucta tema vurgusundan bir tutam renk var. */
+    background: linear-gradient(
+        180deg,
+        var(--accent-soft-border) 0,
+        var(--border) 18%,
+        var(--border) 68%,
+        transparent 100%
+    );
     z-index: 0;
 }
 
@@ -446,7 +474,8 @@ p {
     margin-right: 2rem;
     z-index: 2;
     border: 1px solid var(--border);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+    /* Ince orkide halka: nokta cizgiden ayrilirken temaya baglaniyor. */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18), 0 0 0 4px rgba(240, 166, 255, 0.07);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -608,6 +637,12 @@ p {
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 1.25rem 1.5rem;
+    position: relative;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.mini-project:hover {
+    border-color: var(--accent-soft-border);
+    box-shadow: 0 10px 24px -16px rgba(0, 0, 0, 0.45);
 }
 .mini-project h4 {
     margin: 0 0 0.4rem;
