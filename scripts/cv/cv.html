@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Emre Bulut — CV</title>
+<style>
+  @page { size: A4; margin: 9mm 12mm 7mm 12mm; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 8.5pt;
+    line-height: 1.28;
+    color: #1a1a1a;
+  }
+
+  h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #16324f;
+    margin-bottom: 3pt;
+  }
+
+  .contact {
+    font-size: 8.1pt;
+    color: #52606d;
+    margin-bottom: 6.5pt;
+  }
+  .contact a { color: #52606d; text-decoration: none; }
+
+  h2 {
+    font-size: 9.2pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #16324f;
+    border-bottom: 1px solid #c9d3dd;
+    padding-bottom: 2pt;
+    margin-top: 6pt;
+    margin-bottom: 3.5pt;
+  }
+
+  .entry { margin-bottom: 4.2pt; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10pt;
+  }
+  .entry-title { font-weight: 700; font-size: 9.4pt; }
+  .entry-date { font-size: 8.1pt; color: #52606d; white-space: nowrap; }
+  .entry-sub {
+    font-style: italic;
+    font-size: 8.5pt;
+    color: #3d4852;
+    margin-top: 0.5pt;
+  }
+
+  ul { margin: 2pt 0 0 11pt; }
+  li { margin-bottom: 1.2pt; }
+
+  p.summary { text-align: justify; }
+
+  .skills-row { margin-bottom: 2.1pt; }
+  .skills-row b { color: #16324f; }
+</style>
+</head>
+<body>
+
+<h1>Emre Bulut</h1>
+<p class="contact">
+  Istanbul, Turkey &nbsp;|&nbsp; emrebulutf@gmail.com &nbsp;|&nbsp;
+  linkedin.com/in/emre-bulut-212b42200 &nbsp;|&nbsp;
+  github.com/emrefbulut &nbsp;|&nbsp; emrebulut.tech
+</p>
+
+<h2>Professional Summary</h2>
+<p class="summary">
+  Electrical and Electronics Engineering student working at the intersection of RF/microwave
+  engineering and machine learning. I build signal-processing pipelines that turn raw
+  software-defined radio captures into trainable datasets, and I train and deploy computer
+  vision models on edge hardware &mdash; grounded in hands-on enterprise virtualization, Linux
+  automation, embedded telemetry, and field electrical work. I am looking to apply this
+  combination where signal integrity and model reliability matter equally.
+</p>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">Istanbul Medipol University</span>
+    <span class="entry-date">Expected Graduation: June 2028</span>
+  </div>
+  <div class="entry-sub">Bachelor's Degree, Electrical and Electronics Engineering (3rd Year Student)</div>
+</div>
+
+<h2>Professional Experience</h2>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">Ziraat Teknoloji A.Ş.</span>
+    <span class="entry-date">July 2026 &ndash; August 2026</span>
+  </div>
+  <div class="entry-sub">System and Virtualization Engineering Intern (Corporate IT &amp; Operations)</div>
+  <ul>
+    <li>Monitored and managed enterprise-scale IT infrastructure, VMware vSphere and Workstation
+        virtualization architectures, and HPE iLO for out-of-band server management.</li>
+    <li>Developed and deployed system automation workflows on Red Hat Enterprise Linux servers,
+        and analyzed planned and unplanned downtime through root cause analysis alongside
+        experienced engineering teams.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">Gülverdi Elektrik</span>
+    <span class="entry-date">August 2025 &ndash; September 2025</span>
+  </div>
+  <div class="entry-sub">Electrical Engineering Intern (Field &amp; Maintenance Operations)</div>
+  <ul>
+    <li>Assisted in the maintenance and troubleshooting of electrical panels and industrial
+        equipment, gaining hands-on experience in field operations and safety protocols.</li>
+    <li>Supported tracking of technical inventory and equipment condition, building a working
+        understanding of physical production environments.</li>
+  </ul>
+</div>
+
+<h2>Key Engineering &amp; AI Projects</h2>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">IQForge &mdash; SDR Signal Datasets for Machine Learning</span>
+    <span class="entry-date">2026</span>
+  </div>
+  <div class="entry-sub">Python, PyTorch, SigMF &nbsp;·&nbsp; github.com/emrefbulut/iqforge</div>
+  <ul>
+    <li>Built an open-source tool converting SDR captures into PyTorch datasets, reading SigMF
+        natively (cf32_le, ci16_le, ci8, memory-mapped for large files).</li>
+    <li>Eliminated a train/test leakage failure mode: neighbouring windows share samples, so naive
+        window-level splitting inflated accuracy by up to 13.6 points. Splitting at the recording
+        level removes it. Added nuisance-variable balancing across SigMF metadata, and made the
+        tool halt with a diagnostic error rather than silently degrade.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">RoomGate-AI &mdash; Smart Access &amp; Occupancy Monitor</span>
+    <span class="entry-date">May 2026 &ndash; June 2026</span>
+  </div>
+  <div class="entry-sub">Python, YOLO26, Edge Computing &nbsp;·&nbsp; github.com/emrefbulut/RoomGate-AI</div>
+  <ul>
+    <li>Engineered an AI-driven access-control prototype bridging computer vision with hardware:
+        an edge-optimized YOLO26 detection model driving a relay-based lock.</li>
+    <li>Implemented spatial region-of-interest filtering so detections only trigger inside defined
+        zones, cutting false actuations.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">VoltPilot &mdash; EV Grid Readiness Simulation</span>
+    <span class="entry-date">April 2026 &ndash; June 2026</span>
+  </div>
+  <div class="entry-sub">TypeScript, Power Systems Modelling &nbsp;·&nbsp; github.com/emrefbulut/VoltPilot</div>
+  <ul>
+    <li>Developed a data-driven simulation that analyzes a facility's electrical grid capacity
+        before EV charging infrastructure investment, covering transformer monitoring, battery
+        management, and telemetry validation.</li>
+  </ul>
+</div>
+
+<h2>Leadership &amp; Extracurricular</h2>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">IEEE Communications Society (ComSoc) &mdash; Chairman</span>
+    <span class="entry-date">Istanbul Medipol Uni.</span>
+  </div>
+  <ul>
+    <li>Coordinated multidisciplinary engineering teams, organized technical seminars, and built a
+        culture of continuous learning across the student branch.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="entry-title">Sırada &mdash; Co-Founder</span>
+    <span class="entry-date">Dec 2025 &ndash; July 2026</span>
+  </div>
+  <ul>
+    <li>Led end-to-end product development of a B2B smart queue and reservation platform, applying
+        agile methods to iterate on features from performance data and user feedback.</li>
+  </ul>
+</div>
+
+<h2>Skills &amp; Competencies</h2>
+<div class="skills-row">
+  <b>RF &amp; Signal Processing:</b> Software-Defined Radio (SDR), SigMF, IQ data handling,
+  windowing and normalization, RF dataset construction, 5G application concepts
+</div>
+<div class="skills-row">
+  <b>Machine Learning &amp; Computer Vision:</b> PyTorch, object detection (YOLO26, YOLOv8,
+  MobileNetV3), model training and fine-tuning, dataset design, data labeling, train/test leakage
+  prevention, edge deployment
+</div>
+<div class="skills-row">
+  <b>Programming:</b> Python, Java, C
+</div>
+<div class="skills-row">
+  <b>Systems &amp; Infrastructure:</b> VMware vSphere/Workstation, Red Hat Enterprise Linux, HPE
+  iLO, IT automation, root cause analysis, MQTT, REST APIs, SQLite
+</div>
+<div class="skills-row">
+  <b>Soft Skills:</b> Analytical problem-solving, initiative, collaborative teamwork, adaptability
+</div>
+<div class="skills-row">
+  <b>Languages:</b> Turkish (Native), English (Advanced)
+</div>
+
+</body>
+</html>

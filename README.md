@@ -86,3 +86,16 @@ assets/
 - LinkedIn: [emre-bulut-212b42200](https://www.linkedin.com/in/emre-bulut-212b42200/)
 - GitHub: [@emrefbulut](https://github.com/emrefbulut)
 - PyPI: [emre.bulut](https://pypi.org/user/emre.bulut/)
+
+## CV
+
+`assets/cv/Emre_Bulut_CV.pdf` elle düzenlenmiyor; `scripts/cv/cv.html` kaynağından
+üretiliyor. Güncellemek için HTML'i düzenleyip yeniden bas:
+
+```bash
+chrome --headless=new --no-pdf-header-footer \
+  --print-to-pdf="assets/cv/Emre_Bulut_CV.pdf" \
+  "file:///$PWD/scripts/cv/cv.html"
+```
+
+Tek sayfaya sığacak şekilde ayarlandı; içerik eklerken sayfa taşmasını kontrol edin.
