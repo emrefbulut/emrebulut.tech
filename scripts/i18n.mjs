@@ -13,11 +13,11 @@ export const pageMeta = {
     canonical: "https://emrebulut.tech/",
     ogLocale: "tr_TR",
     ogLocaleAlternate: "en_US",
-    title: "Emre Bulut | Elektrik-Elektronik Mühendisliği Öğrencisi",
+    title: "Emre Bulut | RF/Mikrodalga ve Yapay Zeka | EEE Öğrencisi",
     description:
-      "Emre Bulut - Elektrik ve Elektronik Mühendisliği öğrencisi. Bilgisayarlı görü, gömülü sistemler ve enerji sistemleri üzerine projeler.",
+      "Emre Bulut - Elektrik ve Elektronik Mühendisliği öğrencisi. RF/mikrodalga ve sinyal işlemeyi makine öğrenmesi ve bilgisayarlı görü ile harmanlayan projeler.",
     ogDescription:
-      "Bilgisayarlı görü, gömülü sistemler ve enerji sistemleri üzerine projeler geliştiren EEE öğrencisi.",
+      "RF/mikrodalga ve sinyal işlemeyi makine öğrenmesiyle harmanlayan projeler geliştiren EEE öğrencisi.",
     langNavLabel: "Dil seçimi",
     skipToContent: "İçeriğe geç"
   },
@@ -26,11 +26,11 @@ export const pageMeta = {
     canonical: "https://emrebulut.tech/en/",
     ogLocale: "en_US",
     ogLocaleAlternate: "tr_TR",
-    title: "Emre Bulut | Electrical & Electronics Engineering Student",
+    title: "Emre Bulut | RF/Microwave & Machine Learning | EEE Student",
     description:
-      "Emre Bulut - Electrical and Electronics Engineering student. Projects across computer vision, embedded systems, and energy systems.",
+      "Emre Bulut - Electrical and Electronics Engineering student. Projects blending RF/microwave and signal processing with machine learning and computer vision.",
     ogDescription:
-      "Electrical and electronics engineering student building projects across computer vision, embedded systems, and energy systems.",
+      "Electrical and electronics engineering student building projects that blend RF/microwave signal processing with machine learning.",
     langNavLabel: "Language",
     skipToContent: "Skip to content"
   }
@@ -72,7 +72,7 @@ export const translations = {
 
     "about.title": "Ben Kimim?",
     "about.p1":
-      "Elektrik ve Elektronik Mühendisliği öğrencisi olarak bilgisayarlı görü (Computer Vision), model eğitimi ve donanım-yazılım entegrasyonları odaklı çalışmalar yürütüyorum. Kurumsal bilgi teknolojileri altyapılarında edindiğim sistem ve sanallaştırma tecrübesini, nesne yönelimli programlama yetkinliklerimle birleştirerek karmaşık mühendislik problemlerine analitik çözümler üretiyorum. Liderlik görevlerimden ve takım çalışmalarından kazandığım güçlü iletişim becerilerimle, mühendislik standartlarına tam uyumlu, yenilikçi ve ölçeklenebilir teknolojiler geliştirmeyi hedefliyorum.",
+      "Elektrik ve Elektronik Mühendisliği öğrencisiyim; RF/mikrodalga tarafıyla makine öğrenmesini aynı işin iki ucu olarak görüyorum. Bir yanda yazılım tanımlı radyo (SDR) kayıtlarını eğitilebilir veri setlerine dönüştüren sinyal işleme hatları kuruyorum, diğer yanda bilgisayarlı görü ve derin öğrenme modellerini gömülü donanım üzerinde çalıştırıyorum. Kurumsal BT altyapısında edindiğim sistem ve sanallaştırma tecrübesi ile sahadaki elektrik işlerinden gelen pratik alışkanlıklar bu ikisini birbirine bağlıyor. Sinyal bütünlüğünün de model güvenilirliğinin de aynı anda önem taşıdığı problemler üzerinde çalışmayı hedefliyorum.",
     "about.stat.location.label": "Konum",
     "about.stat.uni.label": "Üniversite",
     "about.stat.field.label": "Bölüm",
@@ -87,9 +87,9 @@ export const translations = {
     "experience.ziraat.date": "Temmuz 2026 — Ağustos 2026 · 1 ay",
     "experience.ziraat.role": "Sistem ve Sanallaştırma Mühendisliği Stajyeri (IT Altyapı & Operasyon)",
     "experience.ziraat.b1":
-      "Türkiye'nin en büyük teknoloji üslerinden birinde, dev ölçekli kurumsal veri merkezlerinde VMware vSphere, VMware Workstation ve sanallaştırma mimarileri üzerinde görev almaktayım.",
+      "Türkiye'nin en büyük teknoloji üslerinden birinde, dev ölçekli kurumsal veri merkezlerinde VMware vSphere, VMware Workstation ve sanallaştırma mimarileri üzerinde görev aldım.",
     "experience.ziraat.b2":
-      "Red Hat Enterprise Linux ve Windows Server platformlarında terminal tabanlı sistem yönetimi, ağ topolojisi analizi ve operasyonel iş sürekliliği süreçlerini uygulamaktayım.",
+      "Red Hat Enterprise Linux ve Windows Server platformlarında terminal tabanlı sistem yönetimi, ağ topolojisi analizi ve operasyonel iş sürekliliği süreçlerini uyguladım.",
 
     "experience.gulverdi.date": "Ağustos 2025 — Eylül 2025 · 1 ay",
     "experience.gulverdi.role": "Elektrik Mühendisliği Stajyeri (Güç Sistemleri & Elektrik Altyapısı)",
@@ -172,7 +172,10 @@ export const translations = {
     "projects.toggle.hide": "Detayları Gizle ↑",
 
     "interests.title": "İlgi Alanları",
-    "interests.cv": "Bilgisayarlı Görü & Yapay Zeka",
+    "interests.rf": "RF & Mikrodalga Mühendisliği",
+    "interests.dsp": "Sinyal İşleme & SDR",
+    "interests.ml": "Makine Öğrenmesi & Derin Öğrenme",
+    "interests.cv": "Bilgisayarlı Görü & Görüntü İşleme",
     "interests.embedded": "Gömülü Sistemler & Robotik",
     "interests.energy": "Yenilenebilir Enerji & Güç Sistemleri",
     "interests.iot": "IoT & Telemetri",
@@ -220,7 +223,7 @@ export const translations = {
 
     "about.title": "Who Am I?",
     "about.p1":
-      "As an Electrical and Electronics Engineering student, my work is centered around computer vision, model training, and hardware-software integration. By combining my system and virtualization experience gained in enterprise IT infrastructures with my object-oriented programming capabilities, I develop analytical solutions to complex engineering problems. With strong communication skills honed through leadership roles and teamwork, I aim to develop innovative, scalable technologies fully compliant with engineering standards.",
+      "I am an Electrical and Electronics Engineering student, and I treat RF/microwave engineering and machine learning as two ends of the same problem. On one side I build signal-processing pipelines that turn software-defined radio (SDR) captures into trainable datasets; on the other I run computer vision and deep learning models on embedded hardware. The system and virtualization experience I gained in enterprise IT, together with the practical habits picked up from field electrical work, is what connects the two. I aim to work on problems where signal integrity and model reliability matter equally.",
     "about.stat.location.label": "Location",
     "about.stat.uni.label": "University",
     "about.stat.field.label": "Major",
@@ -235,9 +238,9 @@ export const translations = {
     "experience.ziraat.date": "July 2026 — August 2026 · 1 mo",
     "experience.ziraat.role": "System and Virtualization Engineering Intern (IT Infrastructure & Operations)",
     "experience.ziraat.b1":
-      "Working on VMware vSphere, VMware Workstation, and virtualization architectures in large-scale enterprise data centers at one of Turkey's largest technology hubs.",
+      "Worked on VMware vSphere, VMware Workstation, and virtualization architectures in large-scale enterprise data centers at one of Turkey's largest technology hubs.",
     "experience.ziraat.b2":
-      "Applying terminal-based system management, network topology analysis, and operational business continuity processes on Red Hat Enterprise Linux and Windows Server platforms.",
+      "Applied terminal-based system management, network topology analysis, and operational business continuity processes on Red Hat Enterprise Linux and Windows Server platforms.",
 
     "experience.gulverdi.date": "August 2025 — September 2025 · 1 mo",
     "experience.gulverdi.role": "Electrical Engineering Intern (Power Systems & Infrastructure)",
@@ -319,7 +322,10 @@ export const translations = {
     "projects.toggle.hide": "Hide Details ↑",
 
     "interests.title": "Interests",
-    "interests.cv": "Computer Vision & AI",
+    "interests.rf": "RF & Microwave Engineering",
+    "interests.dsp": "Signal Processing & SDR",
+    "interests.ml": "Machine Learning & Deep Learning",
+    "interests.cv": "Computer Vision & Image Processing",
     "interests.embedded": "Embedded Systems & Robotics",
     "interests.energy": "Renewable Energy & Power Systems",
     "interests.iot": "IoT & Telemetry",
