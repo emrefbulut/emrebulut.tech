@@ -79,6 +79,17 @@ a, button {
     background: rgba(20, 6, 22, 0.44);
 }
 
+/* Telefonda video cok daha agresif kirpiliyor: 1152x720 yatay kaynak,
+   375x812 dikey ekran. Kaynagin parlak bir bolgesi tum ekrani kaplayabiliyor.
+   Olculen deger: 0.44 overlay ile dongunun en parlak aninda hero'daki soluk
+   metnin kontrasti 3.62'ye dusuyor (WCAG AA esigi 4.5). 0.60'ta en dusuk
+   deger ~5.0'a cikiyor, video da hâlâ net gorunuyor.
+   Bu kural reduced-motion blogundan ONCE gelmeli; orada overlay duz renge
+   donuyor ve o kural kazanmali. */
+@media (max-width: 900px) {
+    .site-bg-overlay { background: rgba(20, 6, 22, 0.60); }
+}
+
 a {
     text-decoration: none;
     color: inherit;
