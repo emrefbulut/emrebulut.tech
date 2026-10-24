@@ -72,7 +72,7 @@ export const translations = {
 
     "about.title": "Ben Kimim?",
     "about.p1":
-      "Elektrik ve Elektronik Mühendisliği öğrencisiyim ve asıl yönüm RF/mikrodalga mühendisliği. Yüksek frekans tarafında sinyalin kendisiyle — nasıl yayıldığı, bütünlüğünü nasıl koruduğu, nasıl ölçüldüğü — çalışmak istiyorum. Makine öğrenmesi, derin öğrenme ve bilgisayarlı görü ise yanında taşıdığım alan: yazılım tanımlı radyo (SDR) kayıtlarını eğitilebilir veri setlerine dönüştürürken ya da bir modeli gömülü donanımda çalıştırırken, RF tarafında topladığım veriyi anlamlandırmak için başvurduğum araçlar. Kurumsal BT altyapısında edindiğim sistem tecrübesi ve sahadaki elektrik işleri de bu ikisinin altındaki pratik zemini oluşturuyor.",
+      "Elektrik ve Elektronik Mühendisliği öğrencisiyim ve asıl yönüm RF ve mikrodalga mühendisliği. Yüksek frekansta sinyalin yayılımı, bütünlüğü ve ölçümü üzerine çalışmayı hedefliyorum. Makine öğrenmesi, derin öğrenme ve bilgisayarlı görü ise bu alanı destekleyen yan uzmanlığım: yazılım tanımlı radyo (SDR) kayıtlarını eğitilebilir veri setlerine dönüştürürken ve modelleri gömülü donanım üzerinde çalıştırırken, RF tarafında topladığım veriyi anlamlandırmak için bu yöntemlere başvuruyorum.",
     "about.stat.location.label": "Konum",
     "about.stat.uni.label": "Üniversite",
     "about.stat.field.label": "Bölüm",
@@ -218,7 +218,7 @@ export const translations = {
 
     "about.title": "Who Am I?",
     "about.p1":
-      "I am an Electrical and Electronics Engineering student, and my main direction is RF/microwave engineering. I want to work on the signal itself at high frequencies — how it propagates, how it holds together, how it is measured. Machine learning, deep learning and computer vision are the field I carry alongside it: the tools I reach for to make sense of what I capture on the RF side, whether I am turning software-defined radio (SDR) recordings into trainable datasets or running a model on embedded hardware. The system experience I gained in enterprise IT and the work I did on electrical sites are the practical ground under both.",
+      "I am an Electrical and Electronics Engineering student, and my main direction is RF and microwave engineering. My goal is to work on how signals propagate, hold their integrity and are measured at high frequencies. Machine learning, deep learning and computer vision form the supporting side of that focus: I apply them to make sense of the data I capture on the RF side, whether I am turning software defined radio (SDR) recordings into trainable datasets or running models on embedded hardware.",
     "about.stat.location.label": "Location",
     "about.stat.uni.label": "University",
     "about.stat.field.label": "Major",
