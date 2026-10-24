@@ -176,10 +176,6 @@ export const translations = {
     "interests.dsp": "Sinyal İşleme & SDR",
     "interests.ml": "Makine Öğrenmesi & Derin Öğrenme",
     "interests.cv": "Bilgisayarlı Görü & Görüntü İşleme",
-    "interests.embedded": "Gömülü Sistemler & Robotik",
-    "interests.energy": "Yenilenebilir Enerji & Güç Sistemleri",
-    "interests.iot": "IoT & Telemetri",
-    "interests.infra": "Sistem Mimarisi & Sanallaştırma",
     "interests.startup": "Girişimcilik & Ürün Geliştirme",
 
     "skills.title": "Teknik Yetkinlikler",
@@ -326,10 +322,6 @@ export const translations = {
     "interests.dsp": "Signal Processing & SDR",
     "interests.ml": "Machine Learning & Deep Learning",
     "interests.cv": "Computer Vision & Image Processing",
-    "interests.embedded": "Embedded Systems & Robotics",
-    "interests.energy": "Renewable Energy & Power Systems",
-    "interests.iot": "IoT & Telemetry",
-    "interests.infra": "System Architecture & Virtualization",
     "interests.startup": "Entrepreneurship & Product Development",
 
     "skills.title": "Technical Expertise",
