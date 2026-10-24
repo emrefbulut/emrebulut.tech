@@ -72,7 +72,7 @@ export const translations = {
 
     "about.title": "Ben Kimim?",
     "about.p1":
-      "Elektrik ve Elektronik Mühendisliği öğrencisiyim; RF/mikrodalga tarafıyla makine öğrenmesini aynı işin iki ucu olarak görüyorum. Bir yanda yazılım tanımlı radyo (SDR) kayıtlarını eğitilebilir veri setlerine dönüştüren sinyal işleme hatları kuruyorum, diğer yanda bilgisayarlı görü ve derin öğrenme modellerini gömülü donanım üzerinde çalıştırıyorum. Kurumsal BT altyapısında edindiğim sistem ve sanallaştırma tecrübesi ile sahadaki elektrik işlerinden gelen pratik alışkanlıklar bu ikisini birbirine bağlıyor. Sinyal bütünlüğünün de model güvenilirliğinin de aynı anda önem taşıdığı problemler üzerinde çalışmayı hedefliyorum.",
+      "Elektrik ve Elektronik Mühendisliği öğrencisiyim ve asıl yönüm RF/mikrodalga mühendisliği. Yüksek frekans tarafında sinyalin kendisiyle — nasıl yayıldığı, bütünlüğünü nasıl koruduğu, nasıl ölçüldüğü — çalışmak istiyorum. Makine öğrenmesi, derin öğrenme ve bilgisayarlı görü ise yanında taşıdığım alan: yazılım tanımlı radyo (SDR) kayıtlarını eğitilebilir veri setlerine dönüştürürken ya da bir modeli gömülü donanımda çalıştırırken, RF tarafında topladığım veriyi anlamlandırmak için başvurduğum araçlar. Kurumsal BT altyapısında edindiğim sistem tecrübesi ve sahadaki elektrik işleri de bu ikisinin altındaki pratik zemini oluşturuyor.",
     "about.stat.location.label": "Konum",
     "about.stat.uni.label": "Üniversite",
     "about.stat.field.label": "Bölüm",
@@ -176,7 +176,6 @@ export const translations = {
     "interests.dsp": "Sinyal İşleme & SDR",
     "interests.ml": "Makine Öğrenmesi & Derin Öğrenme",
     "interests.cv": "Bilgisayarlı Görü & Görüntü İşleme",
-    "interests.startup": "Girişimcilik & Ürün Geliştirme",
 
     "skills.title": "Teknik Yetkinlikler",
     "skills.ai.title": "Yapay Zeka & Görüntü İşleme",
@@ -219,7 +218,7 @@ export const translations = {
 
     "about.title": "Who Am I?",
     "about.p1":
-      "I am an Electrical and Electronics Engineering student, and I treat RF/microwave engineering and machine learning as two ends of the same problem. On one side I build signal-processing pipelines that turn software-defined radio (SDR) captures into trainable datasets; on the other I run computer vision and deep learning models on embedded hardware. The system and virtualization experience I gained in enterprise IT, together with the practical habits picked up from field electrical work, is what connects the two. I aim to work on problems where signal integrity and model reliability matter equally.",
+      "I am an Electrical and Electronics Engineering student, and my main direction is RF/microwave engineering. I want to work on the signal itself at high frequencies — how it propagates, how it holds together, how it is measured. Machine learning, deep learning and computer vision are the field I carry alongside it: the tools I reach for to make sense of what I capture on the RF side, whether I am turning software-defined radio (SDR) recordings into trainable datasets or running a model on embedded hardware. The system experience I gained in enterprise IT and the work I did on electrical sites are the practical ground under both.",
     "about.stat.location.label": "Location",
     "about.stat.uni.label": "University",
     "about.stat.field.label": "Major",
@@ -322,7 +321,6 @@ export const translations = {
     "interests.dsp": "Signal Processing & SDR",
     "interests.ml": "Machine Learning & Deep Learning",
     "interests.cv": "Computer Vision & Image Processing",
-    "interests.startup": "Entrepreneurship & Product Development",
 
     "skills.title": "Technical Expertise",
     "skills.ai.title": "AI & Image Processing",
