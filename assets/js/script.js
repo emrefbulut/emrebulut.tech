@@ -35,12 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Video 1.6 MB ve tamamen dekoratif. Isaretlemede yer alsaydi tarayici onu
   // her ziyarette indirirdi; CSS'te display:none yapmak indirmeyi ENGELLEMEZ.
   // Bu yuzden oge yalnizca gercekten gosterilecegi durumda olusturuluyor.
+  //
+  // Ekran genisligine gore bir kisit YOK: hareketli arka plan tasarimin kendisi
+  // ve telefonda da gorunmesi isteniyor. Indirmeyi yalnizca kullanicinin kendi
+  // tercihi (reduced-motion, veri tasarrufu) ya da gercekten yetersiz baglanti
+  // durduruyor.
   const setupBackgroundVideo = () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
-
-    // Dar ekranlarda video zaten kirpiliyor ve mobil veri pahali.
-    if (window.matchMedia('(max-width: 900px)').matches) return;
 
     // Kullanici veri tasarrufu istiyorsa veya baglanti yavassa hic indirme.
     const connection = navigator.connection;
@@ -52,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const video = document.createElement('video');
     video.className = 'site-bg-video';
     video.autoplay = true;
+    // muted + playsInline, iOS'un otomatik oynatmaya izin vermesinin on sarti;
+    // src atanmadan once verilmeleri gerekiyor.
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
@@ -60,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // yol Ingilizce sayfada /en/assets/... olarak cozulur ve 404 verirdi.
     video.src = '/assets/video/bg-flow.mp4';
     document.body.prepend(video);
+
+    // iOS Dusuk Guc Modu ve bazi mobil tarayicilar otomatik oynatmayi yine de
+    // reddedebilir. O durumda geriye donmus bir kare ya da siyah bir dikdortgen
+    // kalmasin diye ogeyi kaldiriyoruz; overlay zaten duz arka plani veriyor.
+    const playAttempt = video.play();
+    if (playAttempt && typeof playAttempt.catch === 'function') {
+      playAttempt.catch(() => video.remove());
+    }
 
     return video;
   };
