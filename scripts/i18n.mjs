@@ -13,7 +13,7 @@ export const pageMeta = {
     canonical: "https://emrebulut.tech/",
     ogLocale: "tr_TR",
     ogLocaleAlternate: "en_US",
-    title: "Emre Bulut | RF/Mikrodalga ve Yapay Zeka | EEE Öğrencisi",
+    title: "Emre Bulut | RF/Mikrodalga ve Makine Öğrenmesi",
     description:
       "Emre Bulut - Elektrik ve Elektronik Mühendisliği öğrencisi. RF/mikrodalga ve sinyal işlemeyi makine öğrenmesi ve bilgisayarlı görü ile harmanlayan projeler.",
     ogDescription:
@@ -26,7 +26,7 @@ export const pageMeta = {
     canonical: "https://emrebulut.tech/en/",
     ogLocale: "en_US",
     ogLocaleAlternate: "tr_TR",
-    title: "Emre Bulut | RF/Microwave & Machine Learning | EEE Student",
+    title: "Emre Bulut | RF/Microwave and Machine Learning",
     description:
       "Emre Bulut - Electrical and Electronics Engineering student. Projects blending RF/microwave and signal processing with machine learning and computer vision.",
     ogDescription:
