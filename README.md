@@ -87,6 +87,34 @@ assets/
 - GitHub: [@emrefbulut](https://github.com/emrefbulut)
 - PyPI: [emre.bulut](https://pypi.org/user/emre.bulut/)
 
+## Simgeler
+
+`favicon.svg` kaynaktır; `favicon.ico` ve `apple-touch-icon.png` ondan üretilir.
+Harfler canlı `<text>` değil, dış hatlara (path) çevrilmiş durumda — böylece simge
+hangi yazıtipinin kurulu olduğuna bakmaksızın her yerde aynı görünür.
+
+Marka işaretini değiştirirsen rasterleri yeniden bas:
+
+```bash
+chrome --headless=new --default-background-color=00000000 \
+  --window-size=512,512 --screenshot=master.png "file://$PWD/favicon.svg"
+
+python - <<'PY'
+from PIL import Image
+s = Image.open("master.png").convert("RGBA")
+s.resize((256, 256), Image.LANCZOS).save(
+    "favicon.ico", sizes=[(16,16),(32,32),(48,48),(64,64),(128,128),(256,256)])
+a = Image.new("RGB", (180, 180), (28, 10, 28))
+r = s.resize((180, 180), Image.LANCZOS)
+a.paste(r, (0, 0), r)                       # iOS saydamlık desteklemez
+a.save("apple-touch-icon.png")
+PY
+```
+
+Google arama sonuçları SVG kabul etmiyor (BMP, GIF, ICO, PNG, JPEG, PPM, TIFF),
+bu yüzden `.ico` birincil bildirimdir ve kökte durmalıdır. Boyut veya kenar
+boşluğu değiştirirsen 16 pikselde okunaklılığı mutlaka kontrol et.
+
 ## CV
 
 `assets/cv/Emre_Bulut_CV.pdf` elle düzenlenmiyor; `scripts/cv/cv.html` kaynağından
